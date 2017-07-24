@@ -6,17 +6,17 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>简单的讲一讲es6常用的特效 | Lynn的博客</title>
+  <title>简单的讲一讲es6常用的特性 | Lynn的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="最近一段时间基本上忙着自己的事情，忙着学习vuex、webpack、es6还有要弄一个vue+nodejs+mysql搞一个简单点开源项目，也在研究微信小程序。正经的写博客也是头一次，利用这个时候写一篇博客试试，讲讲我学过后的es6一些知识。 什么是ES6  ECMAScript 6.0（以下简称 ES6）是 JavaScript 语言的下一代标准，已经在2015年6月正式发布了。它的目标，是使得">
 <meta property="og:type" content="article">
-<meta property="og:title" content="简单的讲一讲es6常用的特效">
+<meta property="og:title" content="简单的讲一讲es6常用的特性">
 <meta property="og:url" content="http://yoursite.com/2017/07/25/es6_aticle/index.html">
 <meta property="og:site_name" content="Lynn的博客">
 <meta property="og:description" content="最近一段时间基本上忙着自己的事情，忙着学习vuex、webpack、es6还有要弄一个vue+nodejs+mysql搞一个简单点开源项目，也在研究微信小程序。正经的写博客也是头一次，利用这个时候写一篇博客试试，讲讲我学过后的es6一些知识。 什么是ES6  ECMAScript 6.0（以下简称 ES6）是 JavaScript 语言的下一代标准，已经在2015年6月正式发布了。它的目标，是使得">
-<meta property="og:updated_time" content="2017-07-24T16:46:52.664Z">
+<meta property="og:updated_time" content="2017-07-24T16:59:31.970Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="简单的讲一讲es6常用的特效">
+<meta name="twitter:title" content="简单的讲一讲es6常用的特性">
 <meta name="twitter:description" content="最近一段时间基本上忙着自己的事情，忙着学习vuex、webpack、es6还有要弄一个vue+nodejs+mysql搞一个简单点开源项目，也在研究微信小程序。正经的写博客也是头一次，利用这个时候写一篇博客试试，讲讲我学过后的es6一些知识。 什么是ES6  ECMAScript 6.0（以下简称 ES6）是 JavaScript 语言的下一代标准，已经在2015年6月正式发布了。它的目标，是使得">
   
     <link rel="alternative" href="/atom.xml" title="Lynn的博客" type="application/atom+xml">
@@ -172,7 +172,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      简单的讲一讲es6常用的特效
+      简单的讲一讲es6常用的特性
     </h1>
   
 
@@ -188,7 +188,7 @@
         <p>最近一段时间基本上忙着自己的事情，忙着学习vuex、webpack、es6还有要弄一个vue+nodejs+mysql搞一个简单点开源项目，也在研究微信小程序。正经的写博客也是头一次，利用这个时候写一篇博客试试，讲讲我学过后的es6一些知识。</p>
 <h2 id="什么是ES6"><a href="#什么是ES6" class="headerlink" title="什么是ES6"></a>什么是ES6</h2><p>  ECMAScript 6.0（以下简称 ES6）是 JavaScript 语言的下一代标准，已经在2015年6月正式发布了。它的目标，是使得 JavaScript 语言可以用来编写复杂的大型应用程序，成为企业级开发语言。因为当前版本的ES6是在2015年发布的，所以又称ECMAScript 2015。<br>  虽然目前并不是所有浏览器都能兼容ES6全部特性，但越来越多的程序员在实际项目当中已经开始使用ES6了。上个周在segmentfault社区里面看到推送的一周周刊里就说道es7已经在六月底就正式发布了，我看这是一年一个版本的节奏，只能说前端的技术更新太快。所以作为前端开发者的你还不关注新的技术那就out了，不会es6的基础用法都不太算是一名前端开发者了。</p>
 <a id="more"></a>
-<h3 id="什么是Babel"><a href="#什么是Babel" class="headerlink" title="什么是Babel"></a>什么是Babel</h3><p>[Babel][1]是一个广泛使用的ES6转码器，可以将ES6代码转为ES5代码，从而在现有环境执行。大家可以选择自己习惯的工具来使用使用Babel，具体过程可直接在Babel官网查看</p>
+<h3 id="什么是Babel"><a href="#什么是Babel" class="headerlink" title="什么是Babel"></a>什么是Babel</h3><p>Babel是一个广泛使用的ES6转码器，可以将ES6代码转为ES5代码，从而在现有环境执行。大家可以选择自己习惯的工具来使用使用Babel，具体过程可直接在Babel官网查看</p>
 <p>####let 和 const 命令<br>在es6之前我们都是使用var来声明一个变量，在es6的时候新增了let、const命令，虽然这两个变量与var类似，但是实际运用中他俩都有各自的特殊用途。<br>首先来看下面这个例子：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">  let a = 10;</div><div class="line">  var b = 1;</div><div class="line">&#125;</div><div class="line"></div><div class="line">a // ReferenceError: a is not defined.</div><div class="line">b // 1</div></pre></td></tr></table></figure></p>
 <p>使用var声明的变量b在代码块之外还能得到1，但是用let定义的变量b在代码块之外却是报错。这是因为let声明的变量只在它所在的代码块有效<br>let命令在for循环场景里面最适合不过了<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">var a = [];</div><div class="line">for (let i = 0; i &lt; 10; i++) &#123;</div><div class="line">  a[i] = function () &#123;</div><div class="line">    console.log(i);</div><div class="line">  &#125;;</div><div class="line">&#125;</div><div class="line">a[6](); // 6</div></pre></td></tr></table></figure></p>
 <p>上面代码使用var来声明那就不一样了<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">var a = [];</div><div class="line">for (var i = 0; i &lt; 10; i++) &#123;</div><div class="line">  a[i] = function () &#123;</div><div class="line">    console.log(i);</div><div class="line">  &#125;;</div><div class="line">&#125;</div><div class="line">a[6](); // 10</div></pre></td></tr></table></figure></p>
