@@ -6,14 +6,21 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Lynn的博客</title>
+  <title>vue集成百度Ueditor富文本编辑器 | Lynn的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Lynn的博客">
-<meta property="og:url" content="http://yoursite.com/index.html">
+  <meta name="description" content="有使用vue来开发项目可能使用一下较为简单的富文本编辑器，功能不是很全面。如果涉及到自媒体运营类的系统Ueditor再适合不过了。网上的富文本编辑器众多，比如：wangEditor 、Simditor 、tinymce等。富文本编辑器设计到的知识面特别广，如果你想自己做简单的nname也可以、利用HTML5中的属性contenteditable，把他放在div上设为true时便可以编辑，但是坑也">
+<meta property="og:type" content="article">
+<meta property="og:title" content="vue集成百度Ueditor富文本编辑器">
+<meta property="og:url" content="http://yoursite.com/2017/07/25/vue-ueditor/index.html">
 <meta property="og:site_name" content="Lynn的博客">
+<meta property="og:description" content="有使用vue来开发项目可能使用一下较为简单的富文本编辑器，功能不是很全面。如果涉及到自媒体运营类的系统Ueditor再适合不过了。网上的富文本编辑器众多，比如：wangEditor 、Simditor 、tinymce等。富文本编辑器设计到的知识面特别广，如果你想自己做简单的nname也可以、利用HTML5中的属性contenteditable，把他放在div上设为true时便可以编辑，但是坑也">
+<meta property="og:image" content="http://101.200.187.90/img/logos/14f1add290b0d403661731ee518ad6e4.png">
+<meta property="og:image" content="http://101.200.187.90/img/logos/a2f5a3efc7e10ab02b31f4905d88726d.png">
+<meta property="og:updated_time" content="2017-07-25T14:10:25.871Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Lynn的博客">
+<meta name="twitter:title" content="vue集成百度Ueditor富文本编辑器">
+<meta name="twitter:description" content="有使用vue来开发项目可能使用一下较为简单的富文本编辑器，功能不是很全面。如果涉及到自媒体运营类的系统Ueditor再适合不过了。网上的富文本编辑器众多，比如：wangEditor 、Simditor 、tinymce等。富文本编辑器设计到的知识面特别广，如果你想自己做简单的nname也可以、利用HTML5中的属性contenteditable，把他放在div上设为true时便可以编辑，但是坑也">
+<meta name="twitter:image" content="http://101.200.187.90/img/logos/14f1add290b0d403661731ee518ad6e4.png">
   
     <link rel="alternative" href="/atom.xml" title="Lynn的博客" type="application/atom+xml">
   
@@ -161,16 +168,14 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-    <article id="post-vue-ueditor" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+            <article id="post-vue-ueditor" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/07/25/vue-ueditor/">vue集成百度Ueditor富文本编辑器</a>
+    <h1 class="article-title" itemprop="name">
+      vue集成百度Ueditor富文本编辑器
     </h1>
   
 
@@ -184,12 +189,211 @@
     <div class="article-entry" itemprop="articleBody">
       
         <hr>
-<p>有使用vue来开发项目可能使用一下较为简单的富文本编辑器，功能不是很全面。如果涉及到自媒体运营类的系统Ueditor再适合不过了。网上的富文本编辑器众多，比如：<a href="http://wangeditor.github.io/" target="_blank" rel="external">wangEditor </a>、<a href="http://simditor.tower.im/" target="_blank" rel="external">Simditor </a>、<a href="https://www.tinymce.com/" target="_blank" rel="external">tinymce</a>等。富文本编辑器设计到的知识面特别广，如果你想自己做简单的nname也可以、利用HTML5中的属性contenteditable，把他放在div上设为true时便可以编辑，但是坑也很多。你可以点击<a href="https://www.zhihu.com/question/38699645" target="_blank" rel="external">为什么说富文本编辑器是天坑</a>这里来看看大神们的回答。这里只讲讲在vue项目中如何集成ueditor，如果你有这个需求希望可以帮助到你<br>
-        
-          <a class="article-more-a" href="/2017/07/25/vue-ueditor/#more">more >></a>
-        
+<p>有使用vue来开发项目可能使用一下较为简单的富文本编辑器，功能不是很全面。如果涉及到自媒体运营类的系统Ueditor再适合不过了。网上的富文本编辑器众多，比如：<a href="http://wangeditor.github.io/" target="_blank" rel="external">wangEditor </a>、<a href="http://simditor.tower.im/" target="_blank" rel="external">Simditor </a>、<a href="https://www.tinymce.com/" target="_blank" rel="external">tinymce</a>等。富文本编辑器设计到的知识面特别广，如果你想自己做简单的nname也可以、利用HTML5中的属性contenteditable，把他放在div上设为true时便可以编辑，但是坑也很多。你可以点击<a href="https://www.zhihu.com/question/38699645" target="_blank" rel="external">为什么说富文本编辑器是天坑</a>这里来看看大神们的回答。这里只讲讲在vue项目中如何集成ueditor，如果你有这个需求希望可以帮助到你<br><a id="more"></a><br>效果图如下：<br><img src="http://101.200.187.90/img/logos/14f1add290b0d403661731ee518ad6e4.png" alt="demo"><br>   1、 首先使用vue-cli脚手架建立一个vue工程，然后去ueditor官网下载源码。地址：<a href="http://ueditor.baidu.com/website/" target="_blank" rel="external">http://ueditor.baidu.com/website/</a> 。把项目复制到vue项目的static文件下。目的是让服务可以访问到里面的文件，打开UEditor目录文件，我这里下载的是nodejs版本的；<br>    项目结构如下：<br>    <img src="http://101.200.187.90/img/logos/a2f5a3efc7e10ab02b31f4905d88726d.png" alt="此处输入图片的描述"><br>  2、然后再main.js中引入js文件</p>
+<pre><code>import &apos;../static/ueditor/ueditor.config&apos;
+import &apos;../static/ueditor/ueditor.all&apos;
+import &apos;../static/ueditor/lang/zh-cn/zh-cn&apos;
+import &apos;../static/ueditor/ueditor.parse.min&apos;
+</code></pre><p> 3、创建组件。在components文件里面创建.vue文件，命名随便你。我这里是命名为ueditor.vue。</p>
+<pre><code>&lt;template&gt;
+  &lt;el-row&gt;
+    &lt;el-col :span=&quot;18&quot; :offset=&quot;3&quot;&gt;
+      &lt;div class=gird-content&gt;
+        &lt;div id=&quot;editor&quot; type=&quot;text/plain&quot; style=&quot;width:1024px;height:500px;&quot;&gt;&lt;/div&gt;
+        &lt;el-button type=&quot;info&quot; @click=&quot;getUedtorContent&quot;&gt;保存&lt;/el-button&gt;
+      &lt;/div&gt;
+    &lt;/el-col&gt;
+  &lt;/el-row&gt;
+&lt;/template&gt;
+&lt;script&gt;
+  import ElButton from &quot;../../node_modules/element-ui/packages/button/src/button&quot;;
+  export default{
+    components: {ElButton}, name: &apos;addnew&apos;,
+    data () {
+      return {
+        input: &apos;&apos;,
+        editor: null
+      }
+    },
+    mounted () {
+        this.editor =UE.getEditor(&apos;editor&apos;, {
+          UEDITOR_HOME_URL: &apos;/static/ueditor/&apos;,//配置资源路径
+          toolbars: [
+            [
+              &apos;anchor&apos;, //锚点
+              &apos;undo&apos;, //撤销
+              &apos;redo&apos;, //重做
+              &apos;bold&apos;, //加粗
+              &apos;indent&apos;, //首行缩进
+              &apos;snapscreen&apos;, //截图
+              &apos;italic&apos;, //斜体
+              &apos;underline&apos;, //下划线
+              &apos;strikethrough&apos;, //删除线
+              &apos;subscript&apos;, //下标
+              &apos;fontborder&apos;, //字符边框
+              &apos;superscript&apos;, //上标
+              &apos;formatmatch&apos;, //格式刷
+              &apos;source&apos;, //源代码
+              &apos;blockquote&apos;, //引用
+              &apos;pasteplain&apos;, //纯文本粘贴模式
+              &apos;selectall&apos;, //全选
+              &apos;print&apos;, //打印
+              &apos;preview&apos;, //预览
+              &apos;horizontal&apos;, //分隔线
+              &apos;removeformat&apos;, //清除格式
+              &apos;time&apos;, //时间
+              &apos;date&apos;, //日期
+              &apos;unlink&apos;, //取消链接
+              &apos;insertrow&apos;, //前插入行
+              &apos;insertcol&apos;, //前插入列
+              &apos;mergeright&apos;, //右合并单元格
+              &apos;mergedown&apos;, //下合并单元格
+              &apos;deleterow&apos;, //删除行
+              &apos;deletecol&apos;, //删除列
+              &apos;splittorows&apos;, //拆分成行
+              &apos;splittocols&apos;, //拆分成列
+              &apos;splittocells&apos;, //完全拆分单元格
+              &apos;deletecaption&apos;, //删除表格标题
+              &apos;inserttitle&apos;, //插入标题
+              &apos;mergecells&apos;, //合并多个单元格
+              &apos;deletetable&apos;, //删除表格
+              &apos;cleardoc&apos;, //清空文档
+              &apos;insertparagraphbeforetable&apos;, //&quot;表格前插入行&quot;
+              &apos;insertcode&apos;, //代码语言
+              &apos;fontfamily&apos;, //字体
+              &apos;fontsize&apos;, //字号
+              &apos;paragraph&apos;, //段落格式
+              &apos;simpleupload&apos;, //单图上传
+              &apos;insertimage&apos;, //多图上传
+              &apos;edittable&apos;, //表格属性
+              &apos;edittd&apos;, //单元格属性
+              &apos;link&apos;, //超链接
+              &apos;emotion&apos;, //表情
+              &apos;spechars&apos;, //特殊字符
+              &apos;searchreplace&apos;, //查询替换
+              &apos;map&apos;, //Baidu地图
+              &apos;gmap&apos;, //Google地图
+              &apos;insertvideo&apos;, //视频
+              &apos;help&apos;, //帮助
+              &apos;justifyleft&apos;, //居左对齐
+              &apos;justifyright&apos;, //居右对齐
+              &apos;justifycenter&apos;, //居中对齐
+              &apos;justifyjustify&apos;, //两端对齐
+              &apos;forecolor&apos;, //字体颜色
+              &apos;backcolor&apos;, //背景色
+              &apos;insertorderedlist&apos;, //有序列表
+              &apos;insertunorderedlist&apos;, //无序列表
+              &apos;fullscreen&apos;, //全屏
+              &apos;directionalityltr&apos;, //从左向右输入
+              &apos;directionalityrtl&apos;, //从右向左输入
+              &apos;rowspacingtop&apos;, //段前距
+              &apos;rowspacingbottom&apos;, //段后距
+              &apos;pagebreak&apos;, //分页
+              &apos;insertframe&apos;, //插入Iframe
+              &apos;imagenone&apos;, //默认
+              &apos;imageleft&apos;, //左浮动
+              &apos;imageright&apos;, //右浮动
+              &apos;attachment&apos;, //附件
+              &apos;imagecenter&apos;, //居中
+              &apos;wordimage&apos;, //图片转存
+              &apos;lineheight&apos;, //行间距
+              &apos;edittip &apos;, //编辑提示
+              &apos;customstyle&apos;, //自定义标题
+              &apos;autotypeset&apos;, //自动排版
+              &apos;webapp&apos;, //百度应用
+              &apos;touppercase&apos;, //字母大写
+              &apos;tolowercase&apos;, //字母小写
+              &apos;background&apos;, //背景
+              &apos;template&apos;, //模板
+              &apos;scrawl&apos;, //涂鸦
+              &apos;music&apos;, //音乐
+              &apos;inserttable&apos;, //插入表格
+              &apos;drafts&apos;, // 从草稿箱加载
+              &apos;charts&apos;, // 图表
+            ]
+          ],
+          autoHeightEnabled: true,
+          autoFloatEnabled: true,
+          minFrameHeight: 500,
+        });
+    },
+    destroyed(){
+        this.editor.destroy();
+    },
+    methods:{
+        getUedtorContent: function () {
+          console.log(this.editor.getContent());
+        }
+    }
+  }
+&lt;/script&gt;
+</code></pre><p>4、在你想要显示第view中引入该组件即可。</p>
+<hr>
+<p>关于上传地址配置需要在ueditot.config.js文件里面进行配置。这里也需要后端配置，具体实现可以在uedtor文档上进行查看。<br>贴上我这里的代码：<br>ueditot.config.js中：serverUrl: “/ue” // 服务器统一请求接口路径<br>后端接口：</p>
+<pre><code>app.use(&quot;/ue&quot;, ueditor(path.join(__dirname,&apos;/public&apos;), function (req, res, next) {
+  //客户端上传文件设置
+  var imgDir = &apos;/img/ueditor/&apos;;
+  var ActionType = req.query.action;
+  if (ActionType === &apos;uploadimage&apos; || ActionType === &apos;uploadfile&apos; || ActionType === &apos;uploadvideo&apos;) {
+    var file_url = imgDir;//默认图片上传地址
+    /*其他上传格式的地址*/
+    if (ActionType === &apos;uploadfile&apos;) {
+      file_url = &apos;/file/ueditor/&apos;; //附件
+    }
+    if (ActionType === &apos;uploadvideo&apos;) {
+      file_url = &apos;/video/ueditor/&apos;; //视频
+    }
+    res.ue_up(file_url); //你只要输入要保存的地址 。保存操作交给ueditor来做
+    res.setHeader(&apos;Content-Type&apos;, &apos;text/html&apos;);
+  }
+  //  客户端发起图片列表请求
+  else if (req.query.action === &apos;listimage&apos;) {
+    var dir_url = imgDir;
+    res.ue_list(dir_url); // 客户端会列出 dir_url 目录下的所有图片
+  }
+  // 客户端发起其它请求
+  else {
+    // console.log(&apos;config.json&apos;)
+    res.setHeader(&apos;Content-Type&apos;, &apos;application/json&apos;);
+    res.redirect(&apos;/static/ueditor/nodejs/config.json&apos;);
+  }
+}));
+需要注意的是资源路径容易搞错。使用相对路径即可
+</code></pre><p>以上都是个人在开发过程中遇到的问题然后根据网友提供的方法再自己整理出来，然后记录下来的。希望对大家有所帮忙。</p>
+
       
 
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="http://chenghu.oss-cn-shanghai.aliyuncs.com/alipay.png">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="http://chenghu.oss-cn-shanghai.aliyuncs.com/wxplay.jpg">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
       
     </div>
     <div class="article-info article-info-index">
@@ -198,173 +402,94 @@
       
 
       
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/07/25/vue-ueditor/">展开全文 >></a>
-        </p>
-      
 
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://yoursite.com/2017/07/25/vue-ueditor/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
       
       <div class="clearfix"></div>
     </div>
   </div>
 </article>
 
-
-
-
-
   
-    <article id="post-es6_aticle" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
+<nav id="article-nav">
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/07/25/es6_aticle/">简单的讲一讲es6常用的特性</a>
-    </h1>
   
-
-        
-        <a href="/2017/07/25/es6_aticle/" class="archive-article-date">
-  	<time datetime="2017-07-24T16:28:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-07-25</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>最近一段时间基本上忙着自己的事情，忙着学习vuex、webpack、es6还有要弄一个vue+nodejs+mysql搞一个简单点开源项目，也在研究微信小程序。正经的写博客也是头一次，利用这个时候写一篇博客试试，讲讲我学过后的es6一些知识。</p>
-<h2 id="什么是ES6"><a href="#什么是ES6" class="headerlink" title="什么是ES6"></a>什么是ES6</h2><p>  ECMAScript 6.0（以下简称 ES6）是 JavaScript 语言的下一代标准，已经在2015年6月正式发布了。它的目标，是使得 JavaScript 语言可以用来编写复杂的大型应用程序，成为企业级开发语言。因为当前版本的ES6是在2015年发布的，所以又称ECMAScript 2015。<br>  虽然目前并不是所有浏览器都能兼容ES6全部特性，但越来越多的程序员在实际项目当中已经开始使用ES6了。上个周在segmentfault社区里面看到推送的一周周刊里就说道es7已经在六月底就正式发布了，我看这是一年一个版本的节奏，只能说前端的技术更新太快。所以作为前端开发者的你还不关注新的技术那就out了，不会es6的基础用法都不太算是一名前端开发者了。</p>
-        
-          <a class="article-more-a" href="/2017/07/25/es6_aticle/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/07/25/es6_aticle/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
+    <a href="/2017/07/25/es6_aticle/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">简单的讲一讲es6常用的特性</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
 
 
 
 
 
   
-    <article id="post-new-article" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/06/19/new-article/">想要提升移动网页的加载速度？你可以Get这些技能</a>
-    </h1>
-  
-
-        
-        <a href="/2017/06/19/new-article/" class="archive-article-date">
-  	<time datetime="2017-06-19T13:41:03.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-06-19</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>在这个信息爆炸的时代，使用移动终端获取新鲜信息已经是大势所趋，但是移动网页浏览速度还有巨大的提升空间。据 Strangeloop Networks 统计，在同样的网络条件下，使用移动端访问相同网页平均会比 PC 端慢 40%！</p>
-<p>然而另一方面，用户对网速的要求却步步紧逼。Akamai 的研究表明，网页响应时间可容忍的阀值是 2 秒，一旦超过 3 秒，会有 40% 的用户放弃浏览页面。简而言之，作为内容服务商的你，可能因为移动网页的加载“太持久”，已经默默的流失了众多客户。</p>
-<p>所谓天下武功，唯快不破！想要设计更快的网页优化速度，我们可以借鉴成功的优化经验以及技术。<br>
-        
-          <a class="article-more-a" href="/2017/06/19/new-article/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/06/19/new-article/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
 
   
-    <article id="post-欢迎来到我的博客" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/05/20/欢迎来到我的博客/">欢迎来到我的博客</a>
-    </h1>
-  
-
-        
-        <a href="/2017/05/20/欢迎来到我的博客/" class="archive-article-date">
-  	<time datetime="2017-05-20T07:26:50.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-05-20</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>欢迎来到我的博客、以后我将在这里分享我的技术博客、把我遇到的技术问题在这里跟大家分享，也希望大家能够提出批评和指正，欢迎多挑毛病多多尝试！</p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/05/20/欢迎来到我的博客/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
 
   
+  <div id="SOHUCS" sid="vue-ueditor" ></div> 
+<script type="text/javascript"> 
+(function(){ 
+var appid = "cyt1o2czV"; 
+var conf = "087c94412da514618093c4664c58ffcb"; 
+var width = window.innerWidth || document.documentElement.clientWidth; 
+if (width < 960) { 
+window.document.write('<script id="changyan_mobile_js" charset="utf-8" type="text/javascript" src="http://changyan.sohu.com/upload/mobile/wap-js/changyan_mobile.js?client_id=' + appid + '&conf=' + conf + '"><\/script>'); } else { var loadJs=function(d,a){var c=document.getElementsByTagName("head")[0]||document.head||document.documentElement;var b=document.createElement("script");b.setAttribute("type","text/javascript");b.setAttribute("charset","UTF-8");b.setAttribute("src",d);if(typeof a==="function"){if(window.attachEvent){b.onreadystatechange=function(){var e=b.readyState;if(e==="loaded"||e==="complete"){b.onreadystatechange=null;a()}}}else{b.onload=a}}c.appendChild(b)};loadJs("http://changyan.sohu.com/upload/changyan.js",function(){window.changyan.api.config({appid:appid,conf:conf})}); } })(); </script>
+  
+
   
 
 
@@ -387,8 +512,8 @@
     <script>
 	var yiliaConfig = {
 		mathjax: false,
-		isHome: true,
-		isPost: false,
+		isHome: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
