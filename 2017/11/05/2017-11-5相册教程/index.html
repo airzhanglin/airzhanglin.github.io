@@ -6,14 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Lynn的博客</title>
+  <title>hexo Yilia 主题如何添加相册功能 | Lynn的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Lynn的博客">
-<meta property="og:url" content="http://yoursite.com/index.html">
+  <meta name="description" content="如果你拥有hexo搭建的博客，然后使用也是Yilia主题的应该知道Yilia主题会有一个相册的。我也是使用的这一套主题，然后也很想搞一个相册，在Yilia主题的作者 Litten的github上留言问了如何实现这一个功能，作者也没有详细说明，我这里根据网友提供的方法来实现的。这里贴一下链接吧：点击这里可能更加详细。自己整理了一下思路：   在主页上必须有一个可供点击的相册链接 要用 hexo 生成">
+<meta property="og:type" content="article">
+<meta property="og:title" content="hexo Yilia 主题如何添加相册功能">
+<meta property="og:url" content="http://yoursite.com/2017/11/05/2017-11-5相册教程/index.html">
 <meta property="og:site_name" content="Lynn的博客">
+<meta property="og:description" content="如果你拥有hexo搭建的博客，然后使用也是Yilia主题的应该知道Yilia主题会有一个相册的。我也是使用的这一套主题，然后也很想搞一个相册，在Yilia主题的作者 Litten的github上留言问了如何实现这一个功能，作者也没有详细说明，我这里根据网友提供的方法来实现的。这里贴一下链接吧：点击这里可能更加详细。自己整理了一下思路：   在主页上必须有一个可供点击的相册链接 要用 hexo 生成">
+<meta property="og:image" content="http://oyw325zzy.bkt.clouddn.com/N6%7B~$%60BC%5D1%29$ICSO9WWO@JG.png">
+<meta property="og:updated_time" content="2017-11-05T14:42:02.804Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Lynn的博客">
+<meta name="twitter:title" content="hexo Yilia 主题如何添加相册功能">
+<meta name="twitter:description" content="如果你拥有hexo搭建的博客，然后使用也是Yilia主题的应该知道Yilia主题会有一个相册的。我也是使用的这一套主题，然后也很想搞一个相册，在Yilia主题的作者 Litten的github上留言问了如何实现这一个功能，作者也没有详细说明，我这里根据网友提供的方法来实现的。这里贴一下链接吧：点击这里可能更加详细。自己整理了一下思路：   在主页上必须有一个可供点击的相册链接 要用 hexo 生成">
+<meta name="twitter:image" content="http://oyw325zzy.bkt.clouddn.com/N6%7B~$%60BC%5D1%29$ICSO9WWO@JG.png">
   
     <link rel="alternative" href="/atom.xml" title="Lynn的博客" type="application/atom+xml">
   
@@ -161,16 +167,14 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-    <article id="post-2017-11-5相册教程" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+            <article id="post-2017-11-5相册教程" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/11/05/2017-11-5相册教程/">hexo Yilia 主题如何添加相册功能</a>
+    <h1 class="article-title" itemprop="name">
+      hexo Yilia 主题如何添加相册功能
     </h1>
   
 
@@ -193,63 +197,59 @@
 <li>图片要有一个完整的路径,把图片放到哪呢?七牛的图床,github 的空间,自己的服务器都可以.</li>
 <li>.怎么上传呢?大量图片当然写脚本传了.不会写咋办?很多人都写好了,改改就是了,脚本也有很多个版本.多数用 nodeJS写的,hexo 就用的 nodeJS.Python也是很不错的选择.</li>
 <li>准备两套图片，一套大图(原图)，一套小图（缩率）</li>
-<li>通过hexo d来生成相册页面
-        
-          <a class="article-more-a" href="/2017/11/05/2017-11-5相册教程/#more">more >></a>
-        
+<li>通过hexo d来生成相册页面<a id="more"></a>
+</li>
+</ul>
+</blockquote>
+<p> <strong>1. 提供一个可点击的链接。</strong><br> 1.进入你的博客目录下通过命令 hexo new page “photos”就会在source目录下生成photos这个文件夹<br> 2.配置 Yilia 主题让其显示出来.<br>  yourBlog/themes/yilia/_config.yml文件中这样设置</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">主页: /</div><div class="line">相册: photos</div></pre></td></tr></table></figure>
+<p> <strong>2. 如何生成一个photos.html这个文件</strong><br>   1.这里我也不知道具体如何生成，具体的代码我没有去看，因为我认为这仅仅是一个工具。所以我直接下载了作者的文件。<a href="https://github.com/litten/BlogBackup" target="_blank" rel="external">下载地址</a>，<a href="http://lawlite.me/2017/04/13/Hexo-Github%E5%AE%9E%E7%8E%B0%E7%9B%B8%E5%86%8C%E5%8A%9F%E8%83%BD/#more" target="_blank" rel="external">你也可以下载我的备份文件</a></p>
+<p>  2.这里就是放相册资源的目录，我是模仿作者的目录来的，具体的文件中怎么写可以直接参考Yilia主题的作者，我是直接拷贝下来的。说明一下:data.json这个文件开始是不存在。<br><img src="http://oyw325zzy.bkt.clouddn.com/N6%7B~$%60BC%5D1%29$ICSO9WWO@JG.png" alt="cmd-markdown-logo"><br>ejs 文件是以后要hexo 文件渲染的文件.<br>assets 目录是放默认图片的也要有.<br>3.index.ejs文件可以修改也可以不修改，作者里是把评论的功能去掉了。而我把comments设置了true。<br>4.修改 ins.js 文件的 render()函数.这个函数是用来渲染数据的<br>修改图片的路径地址.minSrc 小图的路径. src 大图的路径.修改为自己的图片路径(七牛的, github的路径).<br>![此处输入图片的描述][4]<br>上面的代码只需要修改路劲就可以了。我在这里遇到一个坑，我下载了作者的代码，只修改了minSrc 和src这个路劲，但是最后发现缩略图没法显示，我在浏览器审查的时候发现，figure标签下的img标签的src路劲的地址不对，所我做了更改，直接把修改了minSrc.</p>
+<p> <strong>3. 生成json文件</strong></p>
+<p>   这一步是关键的一步,也是最后一步.先用脚本把图片处理成一套大图和一套小图,所以你需要在你的博客目录下准备如下图所示的文件<br>   ![此处输入图片的描述][5]<br>你把图片都放在这个文件之后执行python脚本后就会生成json文件的。然后把图片再上传的七牛或者 github 上<br>每次更新图片都要执行脚本重新生成 json 文件.这个json 文件会出现在<br>yourBlog/source/photos/data.json<br>图片如何命名，然后显示日期，这里可以看这位博主的<a href="http://lawlite.me/2017/04/13/Hexo-Github%E5%AE%9E%E7%8E%B0%E7%9B%B8%E5%86%8C%E5%8A%9F%E8%83%BD/#more" target="_blank" rel="external">点击查看</a></p>
+<p><strong>4. 处理图片</strong><br>我用的别人写好的脚本,看他写得已经很全了,我也懒得再写了.改改就好了.[脚本下载地址][6]<br>.py 文件就是 Python 的脚本.<br>脚本的内容我就不讲了，因为我也不懂python语法，开始我下载下来然后执行的时候报错，折腾了很久才搞定的，要修改的地方就是：</p>
+<ol>
+<li>173行的git_operation()方法，这个方法是把图片上传至github的，然如果你图片确实是放在github上，那就没必要注释掉。而我这里是放在七牛上的，所以用不到该方法。</li>
+<li><p>大概131行这里，我执行脚本的时候报错了，源码上写的是../lawlite19.github.io/source/photos/data.json是对应到作者的博客的路径，这里根据需要改成自己博客的路径。而我这里更改成了本地 source/phontos。<br>最后就是执行脚本的功夫了</p>
+<p><strong>5. 可能出现的问题（我是出现过的）</strong></p>
+</li>
+</ol>
+<p>在命令行执行python too.py 命令的时候出现no module named PIL错误<br>百度后知道出现这错误的原因是: PIL 模块找不到,PIL 模块已经过时了.<br>解决方案: 安装 pip install pillow（cmd执行该命令就好了）<br>关于Python如何安装，建议谷歌或者百度。</p>
+<p> <strong>6. 如何执行</strong><br> cmd切换到你的博客目录下，然后执行 python tool.py(处理图片,上传图片,生成 json 文件)<br>hexo clean (清理之前的 HTML 等)<br>hexo g (生成 HTML 文件)<br>hexo s (看看效果如何)<br>最后部署到你的博客上.<br>网上大致文章都是这么的写,找到一个差不多就开始实践吧,如果你看我的去实践遇到问题可以找我,我只要有时间定会回复你.如果遇见更多的坑欢迎补充(github提问,博客评论, QQ 加好友都可以哦)✌️</p>
+
       
 
       
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/11/05/2017-11-5相册教程/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-  
-    <article id="post-vue-ueditor" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/07/25/vue-ueditor/">vue集成百度Ueditor富文本编辑器</a>
-    </h1>
-  
-
-        
-        <a href="/2017/07/25/vue-ueditor/" class="archive-article-date">
-  	<time datetime="2017-07-25T13:54:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-07-25</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <hr>
-<p>有使用vue来开发项目可能使用一下较为简单的富文本编辑器，功能不是很全面。如果涉及到自媒体运营类的系统Ueditor再适合不过了。网上的富文本编辑器众多，比如：<a href="http://wangeditor.github.io/" target="_blank" rel="external">wangEditor </a>、<a href="http://simditor.tower.im/" target="_blank" rel="external">Simditor </a>、<a href="https://www.tinymce.com/" target="_blank" rel="external">tinymce</a>等。富文本编辑器设计到的知识面特别广，如果你想自己做简单的nname也可以、利用HTML5中的属性contenteditable，把他放在div上设为true时便可以编辑，但是坑也很多。你可以点击<a href="https://www.zhihu.com/question/38699645" target="_blank" rel="external">为什么说富文本编辑器是天坑</a>这里来看看大神们的回答。这里只讲讲在vue项目中如何集成ueditor，如果你有这个需求希望可以帮助到你<br>
-        
-          <a class="article-more-a" href="/2017/07/25/vue-ueditor/#more">more >></a>
-        
-      
-
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="http://chenghu.oss-cn-shanghai.aliyuncs.com/alipay.png">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="http://chenghu.oss-cn-shanghai.aliyuncs.com/wxplay.jpg">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
       
     </div>
     <div class="article-info article-info-index">
@@ -258,173 +258,94 @@
       
 
       
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/07/25/vue-ueditor/">展开全文 >></a>
-        </p>
-      
 
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://yoursite.com/2017/11/05/2017-11-5相册教程/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
       
       <div class="clearfix"></div>
     </div>
   </div>
 </article>
 
-
-
-
-
   
-    <article id="post-es6_aticle" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
+<nav id="article-nav">
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/07/25/es6_aticle/">简单的讲一讲es6常用的特性</a>
-    </h1>
   
-
-        
-        <a href="/2017/07/25/es6_aticle/" class="archive-article-date">
-  	<time datetime="2017-07-24T16:28:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-07-25</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>最近一段时间基本上忙着自己的事情，忙着学习vuex、webpack、es6还有要弄一个vue+nodejs+mysql搞一个简单点开源项目，也在研究微信小程序。正经的写博客也是头一次，利用这个时候写一篇博客试试，讲讲我学过后的es6一些知识。</p>
-<h2 id="什么是ES6"><a href="#什么是ES6" class="headerlink" title="什么是ES6"></a>什么是ES6</h2><p>  ECMAScript 6.0（以下简称 ES6）是 JavaScript 语言的下一代标准，已经在2015年6月正式发布了。它的目标，是使得 JavaScript 语言可以用来编写复杂的大型应用程序，成为企业级开发语言。因为当前版本的ES6是在2015年发布的，所以又称ECMAScript 2015。<br>  虽然目前并不是所有浏览器都能兼容ES6全部特性，但越来越多的程序员在实际项目当中已经开始使用ES6了。上个周在segmentfault社区里面看到推送的一周周刊里就说道es7已经在六月底就正式发布了，我看这是一年一个版本的节奏，只能说前端的技术更新太快。所以作为前端开发者的你还不关注新的技术那就out了，不会es6的基础用法都不太算是一名前端开发者了。</p>
-        
-          <a class="article-more-a" href="/2017/07/25/es6_aticle/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/07/25/es6_aticle/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
+    <a href="/2017/07/25/vue-ueditor/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">vue集成百度Ueditor富文本编辑器</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
 
 
 
 
 
   
-    <article id="post-new-article" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/06/19/new-article/">想要提升移动网页的加载速度？你可以Get这些技能</a>
-    </h1>
-  
-
-        
-        <a href="/2017/06/19/new-article/" class="archive-article-date">
-  	<time datetime="2017-06-19T13:41:03.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-06-19</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>在这个信息爆炸的时代，使用移动终端获取新鲜信息已经是大势所趋，但是移动网页浏览速度还有巨大的提升空间。据 Strangeloop Networks 统计，在同样的网络条件下，使用移动端访问相同网页平均会比 PC 端慢 40%！</p>
-<p>然而另一方面，用户对网速的要求却步步紧逼。Akamai 的研究表明，网页响应时间可容忍的阀值是 2 秒，一旦超过 3 秒，会有 40% 的用户放弃浏览页面。简而言之，作为内容服务商的你，可能因为移动网页的加载“太持久”，已经默默的流失了众多客户。</p>
-<p>所谓天下武功，唯快不破！想要设计更快的网页优化速度，我们可以借鉴成功的优化经验以及技术。<br>
-        
-          <a class="article-more-a" href="/2017/06/19/new-article/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/06/19/new-article/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
 
   
-    <article id="post-欢迎来到我的博客" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/05/20/欢迎来到我的博客/">欢迎来到我的博客</a>
-    </h1>
-  
-
-        
-        <a href="/2017/05/20/欢迎来到我的博客/" class="archive-article-date">
-  	<time datetime="2017-05-20T07:26:50.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-05-20</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>欢迎来到我的博客、以后我将在这里分享我的技术博客、把我遇到的技术问题在这里跟大家分享，也希望大家能够提出批评和指正，欢迎多挑毛病多多尝试！</p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/05/20/欢迎来到我的博客/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
 
   
+  <div id="SOHUCS" sid="2017-11-5相册教程" ></div> 
+<script type="text/javascript"> 
+(function(){ 
+var appid = "cyt1o2czV"; 
+var conf = "087c94412da514618093c4664c58ffcb"; 
+var width = window.innerWidth || document.documentElement.clientWidth; 
+if (width < 960) { 
+window.document.write('<script id="changyan_mobile_js" charset="utf-8" type="text/javascript" src="http://changyan.sohu.com/upload/mobile/wap-js/changyan_mobile.js?client_id=' + appid + '&conf=' + conf + '"><\/script>'); } else { var loadJs=function(d,a){var c=document.getElementsByTagName("head")[0]||document.head||document.documentElement;var b=document.createElement("script");b.setAttribute("type","text/javascript");b.setAttribute("charset","UTF-8");b.setAttribute("src",d);if(typeof a==="function"){if(window.attachEvent){b.onreadystatechange=function(){var e=b.readyState;if(e==="loaded"||e==="complete"){b.onreadystatechange=null;a()}}}else{b.onload=a}}c.appendChild(b)};loadJs("http://changyan.sohu.com/upload/changyan.js",function(){window.changyan.api.config({appid:appid,conf:conf})}); } })(); </script>
+  
+
   
 
 
@@ -447,8 +368,8 @@
     <script>
 	var yiliaConfig = {
 		mathjax: false,
-		isHome: true,
-		isPost: false,
+		isHome: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
