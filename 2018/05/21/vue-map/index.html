@@ -6,14 +6,23 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives: 2017/6 | Lynn的博客</title>
+  <title>vue高德地图 | Lynn的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Lynn的博客">
-<meta property="og:url" content="http://yoursite.com/archives/2017/06/index.html">
+  <meta name="description" content="在做基于LBS的应用中，时常会和地图打交道，最直接的解决方案，当然是去对应的地图官网找文档，然后一步步来玩。对于简单场景而言，体验应该还好，但对于一些状态多，变化频繁的复杂场景而言，不仅要时刻维护本地数据状态和地图状态同步，还要查找设置各种状态的地图API，实在是让人头疼的事情，这里我把我自己做过的经验分享一下，一来是自己做下笔记，二来是希望能给一些网友帮助。查看效果">
+<meta name="keywords" content="vue 高的地图">
+<meta property="og:type" content="article">
+<meta property="og:title" content="vue高德地图">
+<meta property="og:url" content="http://yoursite.com/2018/05/21/vue-map/index.html">
 <meta property="og:site_name" content="Lynn的博客">
+<meta property="og:description" content="在做基于LBS的应用中，时常会和地图打交道，最直接的解决方案，当然是去对应的地图官网找文档，然后一步步来玩。对于简单场景而言，体验应该还好，但对于一些状态多，变化频繁的复杂场景而言，不仅要时刻维护本地数据状态和地图状态同步，还要查找设置各种状态的地图API，实在是让人头疼的事情，这里我把我自己做过的经验分享一下，一来是自己做下笔记，二来是希望能给一些网友帮助。查看效果">
+<meta property="og:image" content="https://chenghu.oss-cn-shanghai.aliyuncs.com/map/F93BE17A-C0F4-4075-A129-5EACC97AA09D.png">
+<meta property="og:image" content="https://chenghu.oss-cn-shanghai.aliyuncs.com/map/maplist.png">
+<meta property="og:image" content="https://chenghu.oss-cn-shanghai.aliyuncs.com/map/gdClick.png">
+<meta property="og:updated_time" content="2018-05-21T15:11:25.048Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Lynn的博客">
+<meta name="twitter:title" content="vue高德地图">
+<meta name="twitter:description" content="在做基于LBS的应用中，时常会和地图打交道，最直接的解决方案，当然是去对应的地图官网找文档，然后一步步来玩。对于简单场景而言，体验应该还好，但对于一些状态多，变化频繁的复杂场景而言，不仅要时刻维护本地数据状态和地图状态同步，还要查找设置各种状态的地图API，实在是让人头疼的事情，这里我把我自己做过的经验分享一下，一来是自己做下笔记，二来是希望能给一些网友帮助。查看效果">
+<meta name="twitter:image" content="https://chenghu.oss-cn-shanghai.aliyuncs.com/map/F93BE17A-C0F4-4075-A129-5EACC97AA09D.png">
   
     <link rel="alternative" href="/atom.xml" title="Lynn的博客" type="application/atom+xml">
   
@@ -161,51 +170,225 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-vue-map" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2017" class="archive-year">2017</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/06/19/new-article/" class="archive-article-date">
-  	<time datetime="2017-06-19T13:41:03.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-06-19</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/06/19/new-article/">想要提升移动网页的加载速度？你可以Get这些技能</a>
+    <h1 class="article-title" itemprop="name">
+      vue高德地图
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
+        
+        <a href="/2018/05/21/vue-map/" class="archive-article-date">
+  	<time datetime="2018-05-21T15:08:47.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-05-21</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>在做基于LBS的应用中，时常会和地图打交道，最直接的解决方案，当然是去对应的地图官网找文档，然后一步步来玩。对于简单场景而言，体验应该还好，但对于一些状态多，变化频繁的复杂场景而言，不仅要时刻维护本地数据状态和地图状态同步，还要查找设置各种状态的地图API，实在是让人头疼的事情，这里我把我自己做过的经验分享一下，一来是自己做下笔记，二来是希望能给一些网友帮助。<a href="http://www.zhanglin168.cn/map/index.html" target="_blank" rel="external">查看效果</a><br><a id="more"></a></p>
+<h4 id="项目目录结构"><a href="#项目目录结构" class="headerlink" title="- 项目目录结构"></a>- 项目目录结构</h4><p>   使用vue-cli创建的工程<br>   <img src="https://chenghu.oss-cn-shanghai.aliyuncs.com/map/F93BE17A-C0F4-4075-A129-5EACC97AA09D.png" alt="目录结构"></p>
+<h4 id="引入高德地图资源"><a href="#引入高德地图资源" class="headerlink" title="- 引入高德地图资源"></a>- 引入高德地图资源</h4><p>在index.html页面加入资源：</p>
+<pre><code>&lt;script src=&quot;http://webapi.amap.com/maps?v=1.4.5&amp;key=你的key&quot;&gt;&lt;/script&gt;
+</code></pre><p>还没有创建过高德地图开发者账号的，这里有<a href="http://lbs.amap.com/api/javascript-api/gettingstarted" target="_blank" rel="external">传送门</a></p>
+<h4 id="获取围栏列表"><a href="#获取围栏列表" class="headerlink" title="- 获取围栏列表"></a>- 获取围栏列表</h4><p>查看高德地图地理围栏API文档，<a href="http://lbs.amap.com/api/webservice/guide/api/geofence_service/" target="_blank" rel="external">传送门</a><br>通过查阅文档可知，查询围栏接口为：<a href="http://restapi.amap.com/v4/geofence/meta?key=用户key；这里建议开发者定义一个全局变量key,在后续的创建围栏、删除围栏都需要，这样方便以后更改。" target="_blank" rel="external">http://restapi.amap.com/v4/geofence/meta?key=用户key；这里建议开发者定义一个全局变量key,在后续的创建围栏、删除围栏都需要，这样方便以后更改。</a></p>
+<p>获取数据结构为：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">	&quot;data&quot;: &#123;</div><div class="line">		&quot;page_no&quot;: 1,</div><div class="line">		&quot;page_size&quot;: 20,</div><div class="line">		&quot;rs_list&quot;: [&#123;</div><div class="line">			&quot;adcode&quot;: &quot;0&quot;,</div><div class="line">			&quot;alert_condition&quot;: &quot;leave&quot;,</div><div class="line">			&quot;center&quot;: &quot;112.996064,28.188747&quot;,</div><div class="line">			&quot;create_time&quot;: &quot;2018-03-30 19:39:40&quot;,</div><div class="line">			&quot;enable&quot;: true,</div><div class="line">			&quot;fixed_date&quot;: &quot;&quot;,</div><div class="line">			&quot;gid&quot;: &quot;9936a5cb-d629-4ea1-b736-4bb07704fa19&quot;,</div><div class="line">			&quot;id&quot;: &quot;0&quot;,</div><div class="line">			&quot;key&quot;: &quot;5a56c9f0200552fc3d02f25e387f9bdc&quot;,</div><div class="line">			&quot;name&quot;: &quot;圆形围栏测试&quot;,</div><div class="line">			&quot;points&quot;: &quot;&quot;,</div><div class="line">			&quot;radius&quot;: 500,</div><div class="line">			&quot;repeat&quot;: &quot;Mon,Tues,Wed,Thur,Fri,Sat,Sun&quot;,</div><div class="line">			&quot;time&quot;: &quot;00:00,11:59;13:00,23:59&quot;,</div><div class="line">			&quot;valid_time&quot;: &quot;2018-06-28&quot;</div><div class="line">		&#125;],</div><div class="line">		&quot;total_record&quot;: 3</div><div class="line">	&#125;,</div><div class="line">	&quot;errcode&quot;: 0,</div><div class="line">	&quot;errdetail&quot;: null,</div><div class="line">	&quot;errmsg&quot;: &quot;OK&quot;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>拿到数据后可以直接显示在页面当中：如图所示<br><img src="https://chenghu.oss-cn-shanghai.aliyuncs.com/map/maplist.png" alt="围栏列表"></p>
+<h4 id="创建围栏"><a href="#创建围栏" class="headerlink" title="- 创建围栏"></a>- 创建围栏</h4><p>1、创建地图对象<br>  再edit.vue中首先选定地图的div容器，再创建地图对象。</p>
+<pre><code>&lt;div id=&quot;container&quot; tabindex=&quot;0&quot;&gt;&lt;/div&gt;
+在钩子函数mounted中创建地图对象。为什么要在mounted而不是在created呢？
+created是在实列创建之后执行的函数，而mounted是在HTML加载完成之后执行的函数。地图这里适合这里创建地图对象。
+</code></pre><p>2、设置marker点标注</p>
+<pre><code>设置围栏需要设置知道经度纬度，这就需要点击地图上任意位置，点击了还需要知道点击了哪些位置，所以需要设置marker点标注。
+</code></pre><p> 给地图绑定点击事件，绑定点击事件后，点击的时候回返回经度纬度，这那个便可以这只marker点。<br>    在高德地图API文档中有绑定事件说明。原始写法中是这样的：<br>       <img src="https://chenghu.oss-cn-shanghai.aliyuncs.com/map/gdClick.png" alt="此处输入图片的描述"><br>    在这里我是做了这样的处理：</p>
+<pre><code> //高德地图绑定点击事件
+this.map.on(&quot;click&quot;, res =&gt; {
+//获取到经度纬度
+  let data = { Lng: res.lnglat.getLng(), lat: res.lnglat.getLat() };
+});
+</code></pre><p>设置marker点：</p>
+<p>高德地图API文档中设置marker 点写法为：</p>
+<pre><code>marker = new AMap.Marker({
+    position: provinces[i].center.split(&apos;,&apos;),
+    title: provinces[i].name
+});
+marker.setMap(mapObj);
+</code></pre><p>我在设置围栏点时候，设置两种类型，一种是圆形围栏，另外一种是多边形围栏。在设置圆形围栏点时候，你需要有一个更新marker点，以为圆形围栏是只有一个点，只需要设置半径大小。每次点击地图上点任意点都是更新marker点，也就是重新这只圆形围栏。</p>
+<pre><code> //第一次点击设置标记
+ var positionMark;
+      postionMark = new AMap.Marker({
+        map: _this.map,//地图对象
+        icon: _this.markers[0].icon,//markers数组，储存marker点标注数据
+        position: [
+          _this.markers[0].position[0],
+          _this.markers[0].position[1]
+        ],
+        offset: new AMap.Pixel(-12, -36)
+      });
+      postionMark.setMap(_this.map);
+//更新点标注
+ //第二次更新标记，高德地图api方法
+      postionMark.setPosition([
+        _this.markers[0].position[0],
+        _this.markers[0].position[1]
+      ]); //更新点标记位置
+</code></pre><p>具体代码：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div><div class="line">95</div><div class="line">96</div><div class="line">97</div><div class="line">98</div><div class="line">99</div><div class="line">100</div><div class="line">101</div><div class="line">102</div><div class="line">103</div><div class="line">104</div><div class="line">105</div><div class="line">106</div><div class="line">107</div><div class="line">108</div><div class="line">109</div><div class="line">110</div><div class="line">111</div><div class="line">112</div><div class="line">113</div><div class="line">114</div><div class="line">115</div><div class="line">116</div><div class="line">117</div><div class="line">118</div><div class="line">119</div><div class="line">120</div><div class="line">121</div><div class="line">122</div><div class="line">123</div><div class="line">124</div><div class="line">125</div><div class="line">126</div><div class="line">127</div><div class="line">128</div><div class="line">129</div><div class="line">130</div><div class="line">131</div><div class="line">132</div><div class="line">133</div><div class="line">134</div><div class="line">135</div><div class="line">136</div><div class="line">137</div><div class="line">138</div><div class="line">139</div><div class="line">140</div><div class="line">141</div><div class="line">142</div><div class="line">143</div><div class="line">144</div><div class="line">145</div><div class="line">146</div><div class="line">147</div><div class="line">148</div><div class="line">149</div><div class="line">150</div><div class="line">151</div><div class="line">152</div><div class="line">153</div><div class="line">154</div><div class="line">155</div><div class="line">156</div><div class="line">157</div><div class="line">158</div><div class="line">159</div><div class="line">160</div><div class="line">161</div><div class="line">162</div><div class="line">163</div><div class="line">164</div><div class="line">165</div><div class="line">166</div><div class="line">167</div><div class="line">168</div><div class="line">169</div><div class="line">170</div><div class="line">171</div><div class="line">172</div><div class="line">173</div><div class="line">174</div><div class="line">175</div><div class="line">176</div><div class="line">177</div><div class="line">178</div><div class="line">179</div><div class="line">180</div><div class="line">181</div><div class="line">182</div><div class="line">183</div><div class="line">184</div><div class="line">185</div><div class="line">186</div><div class="line">187</div><div class="line">188</div><div class="line">189</div><div class="line">190</div><div class="line">191</div><div class="line">192</div><div class="line">193</div><div class="line">194</div><div class="line">195</div><div class="line">196</div><div class="line">197</div><div class="line">198</div><div class="line">199</div><div class="line">200</div><div class="line">201</div><div class="line">202</div><div class="line">203</div><div class="line">204</div><div class="line">205</div><div class="line">206</div><div class="line">207</div><div class="line">208</div><div class="line">209</div><div class="line">210</div><div class="line">211</div><div class="line">212</div><div class="line">213</div><div class="line">214</div><div class="line">215</div><div class="line">216</div><div class="line">217</div><div class="line">218</div><div class="line">219</div><div class="line">220</div><div class="line">221</div><div class="line">222</div><div class="line">223</div><div class="line">224</div><div class="line">225</div><div class="line">226</div><div class="line">227</div><div class="line">228</div><div class="line">229</div><div class="line">230</div><div class="line">231</div><div class="line">232</div><div class="line">233</div><div class="line">234</div><div class="line">235</div><div class="line">236</div><div class="line">237</div><div class="line">238</div><div class="line">239</div><div class="line">240</div><div class="line">241</div><div class="line">242</div><div class="line">243</div><div class="line">244</div><div class="line">245</div><div class="line">246</div><div class="line">247</div><div class="line">248</div><div class="line">249</div><div class="line">250</div><div class="line">251</div><div class="line">252</div><div class="line">253</div><div class="line">254</div><div class="line">255</div><div class="line">256</div><div class="line">257</div><div class="line">258</div><div class="line">259</div><div class="line">260</div><div class="line">261</div><div class="line">262</div><div class="line">263</div><div class="line">264</div><div class="line">265</div><div class="line">266</div><div class="line">267</div><div class="line">268</div><div class="line">269</div><div class="line">270</div><div class="line">271</div><div class="line">272</div><div class="line">273</div><div class="line">274</div><div class="line">275</div><div class="line">276</div><div class="line">277</div><div class="line">278</div><div class="line">279</div><div class="line">280</div><div class="line">281</div><div class="line">282</div><div class="line">283</div><div class="line">284</div><div class="line">285</div><div class="line">286</div><div class="line">287</div><div class="line">288</div><div class="line">289</div><div class="line">290</div><div class="line">291</div><div class="line">292</div></pre></td><td class="code"><pre><div class="line">&lt;template&gt;</div><div class="line">  &lt;div class=&quot;editmap-body&quot;&gt;</div><div class="line">    &lt;mt-header title=&quot;电子围栏&quot;&gt;</div><div class="line">     &lt;mt-button icon=&quot;back&quot; @click=&quot;goback&quot; slot=&quot;left&quot;&gt;&lt;/mt-button&gt;</div><div class="line">     &lt;span slot=&quot;right&quot; @click=&quot;sheetVisible=true&quot;&gt;围栏类型&lt;/span&gt;</div><div class="line">    &lt;/mt-header&gt;</div><div class="line">     &lt;!-- 地图容器container --&gt;</div><div class="line">    &lt;div id=&quot;container&quot; tabindex=&quot;0&quot;&gt;&lt;/div&gt;</div><div class="line">    &lt;div class=&quot;drag-body&quot; v-show=&quot;drawType==0&quot;&gt;</div><div class="line">      &lt;div class=&quot;drag&quot;&gt;</div><div class="line">          &lt;mt-range v-model=&quot;radius&quot;  :min=&quot;100&quot; :step=&quot;100&quot; :max=&quot;1500&quot;&gt;</div><div class="line">            &lt;div slot=&quot;start&quot; style=&quot;margin-right: 5px;&quot;&gt;100&lt;/div&gt;</div><div class="line">            &lt;div slot=&quot;end&quot; style=&quot;margin-left: 5px;&quot;&gt;150&lt;/div&gt;</div><div class="line">          &lt;/mt-range&gt;</div><div class="line">          &lt;p v-show=&quot;!isdraw&quot;&gt;当前圆形半径为：&#123;&#123;radius&#125;&#125;&lt;/p&gt;</div><div class="line">      &lt;/div&gt;</div><div class="line">    &lt;/div&gt;</div><div class="line">      &lt;div class=&quot;footer-tip&quot;&gt;</div><div class="line">        &lt;p v-if=&quot;drawType==1&quot;&gt;请在地图上点击三个以上的点组成一个闭合的多边形作为安全范围的区域&lt;/p&gt;</div><div class="line">        &lt;p v-else&gt;请在地图上点击任意位置&lt;/p&gt;</div><div class="line">        &lt;button class=&quot;btn-ok&quot; @click=&quot;goedit&quot;&gt;确定&lt;/button&gt;</div><div class="line">      &lt;/div&gt;</div><div class="line">       &lt;mt-actionsheet :actions=&quot;actions&quot; v-model=&quot;sheetVisible&quot;&gt;&lt;/mt-actionsheet&gt;</div><div class="line">       &lt;transition name=&quot;slide&quot;&gt;</div><div class="line">          &lt;router-view class=&quot;router-body&quot;&gt;&lt;/router-view&gt;</div><div class="line">       &lt;/transition&gt;</div><div class="line">  &lt;/div&gt;</div><div class="line">&lt;/template&gt;</div><div class="line">&lt;script&gt;</div><div class="line">var postionMark;</div><div class="line">var positionMarkPry;</div><div class="line">let circle, polygon, geolocation;</div><div class="line">export default &#123;</div><div class="line">  data() &#123;</div><div class="line">    return &#123;</div><div class="line">      mapInfo: &#123;&#125;,</div><div class="line">      sheetVisible: false,</div><div class="line">      actions: [</div><div class="line">        &#123; name: &quot;圆形（默认）&quot;, method: this.drawClk, type: 0 &#125;,</div><div class="line">        &#123; name: &quot;自定义形状&quot;, method: this.drawClk, type: 1 &#125;</div><div class="line">      ],</div><div class="line">      drawType: 0,</div><div class="line">      markers: [],</div><div class="line">      markerArray: [],</div><div class="line">      isClik: true,</div><div class="line">      isdraw: true,</div><div class="line">      radius: 500,</div><div class="line">      isfirstLoding: false</div><div class="line">    &#125;;</div><div class="line">  &#125;,</div><div class="line">  created() &#123;</div><div class="line">    if (this.$route.query.gid) &#123;</div><div class="line">      this.getdata();</div><div class="line">    &#125;</div><div class="line">  &#125;,</div><div class="line">  mounted() &#123;</div><div class="line">    let _this = this;</div><div class="line">    //创建地图对象，并把对象复制给map。</div><div class="line">    this.map = new AMap.Map(&quot;container&quot;, &#123;</div><div class="line">      //创建地图</div><div class="line">      resizeEnable: true,</div><div class="line">      zoom: 14</div><div class="line">    &#125;);</div><div class="line">    if (!this.$route.query.gid) &#123;</div><div class="line">      //如果是新建那么就获取用户所在位置</div><div class="line">      this.map.plugin(&quot;AMap.Geolocation&quot;, function() &#123;</div><div class="line">        geolocation = new AMap.Geolocation(&#123;</div><div class="line">          enableHighAccuracy: true, //是否使用高精度定位，默认:true</div><div class="line">          timeout: 10000, //超过10秒后停止定位，默认：无穷大</div><div class="line">          buttonOffset: new AMap.Pixel(10, 20), //定位按钮与设置的停靠位置的偏移量，默认：Pixel(10, 20)</div><div class="line">          zoomToAccuracy: true, //定位成功后调整地图视野范围使定位位置及精度范围视野内可见，默认：false</div><div class="line">          buttonPosition: &quot;RB&quot;</div><div class="line">        &#125;);</div><div class="line">        _this.map.addControl(geolocation);</div><div class="line">        geolocation.getCurrentPosition();</div><div class="line">      &#125;);</div><div class="line">    &#125;</div><div class="line">    postionMark = this.map;</div><div class="line">    //高德地图绑定点击事件</div><div class="line">    this.map.on(&quot;click&quot;, res =&gt; &#123;</div><div class="line">      let data = &#123; Lng: res.lnglat.getLng(), lat: res.lnglat.getLat() &#125;;</div><div class="line">      this.mapClk(data);</div><div class="line">    &#125;);</div><div class="line">  &#125;,</div><div class="line">  methods: &#123;</div><div class="line">    getdata() &#123;</div><div class="line">      this.isfirstLoding = true;</div><div class="line">      this.$http</div><div class="line">        .get(&quot;http://restapi.amap.com/v4/geofence/meta&quot;, &#123;</div><div class="line">          params: &#123;</div><div class="line">            key: this.mapKey,</div><div class="line">            gid: this.$route.query.gid,</div><div class="line">            page_no: 1,</div><div class="line">            page_size: 20</div><div class="line">          &#125;</div><div class="line">        &#125;)</div><div class="line">        .then(res =&gt; &#123;</div><div class="line">          this.mapInfo = res.data.data.rs_list[0];</div><div class="line">          let data = this.mapInfo.center.split(&quot;,&quot;);</div><div class="line">          this.map.setCenter([data[0], data[1]]); //设置地图中心点</div><div class="line">          if (this.mapInfo.points==&apos;&apos;) &#123;</div><div class="line">            let data = this.mapInfo.center.split(&quot;,&quot;);</div><div class="line">            this.mapClk(&#123; Lng: data[0], lat: data[1] &#125;);</div><div class="line">            this.radius = this.mapInfo.radius; //圆形半径</div><div class="line">          &#125; else &#123;//多边形</div><div class="line">            let data = this.mapInfo.points.split(&quot;;&quot;);</div><div class="line">            this.drawType = 1;</div><div class="line">            data.forEach((ary, index) =&gt; &#123;</div><div class="line">              this.markers.push(&#123;</div><div class="line">                icon: &quot;http://webapi.amap.com/theme/v1.3/markers/n/mark_b.png&quot;,</div><div class="line">                position: [ary.split(&quot;,&quot;)[0], ary.split(&quot;,&quot;)[1]]</div><div class="line">              &#125;);</div><div class="line">              if (index == data.length - 1) &#123;</div><div class="line">                this.setting();</div><div class="line">                this.drawSt();</div><div class="line">                this.isfirstLoding = false;</div><div class="line">              &#125;</div><div class="line">            &#125;);</div><div class="line">          &#125;</div><div class="line">        &#125;)</div><div class="line">        .catch(err =&gt; &#123;</div><div class="line">          this.toast(&quot;查询失败&quot;);</div><div class="line">        &#125;);</div><div class="line">    &#125;,</div><div class="line">    mapClk(res) &#123;</div><div class="line">      if (this.drawType == 0) &#123;</div><div class="line">        this.markers = [</div><div class="line">          &#123;</div><div class="line">            icon: &quot;http://webapi.amap.com/theme/v1.3/markers/n/mark_b.png&quot;,</div><div class="line">            position: [res.Lng, res.lat]</div><div class="line">          &#125;</div><div class="line">        ];</div><div class="line">        //如果是圆形类型</div><div class="line">        this.setting();</div><div class="line">        this.drawSt();</div><div class="line">      &#125; else &#123;</div><div class="line">        //自定义形状</div><div class="line">        this.markers.push(&#123;</div><div class="line">          icon: &quot;http://webapi.amap.com/theme/v1.3/markers/n/mark_b.png&quot;,</div><div class="line">          position: [res.Lng, res.lat]</div><div class="line">        &#125;);</div><div class="line">        this.setting();</div><div class="line">        if (this.markers.length &gt; 3 || this.markers.length == 3) &#123;</div><div class="line">          this.drawSt();</div><div class="line">        &#125;</div><div class="line">      &#125;</div><div class="line">    &#125;,</div><div class="line">    setting() &#123;</div><div class="line">      //设置标记点</div><div class="line">      let _this = this;</div><div class="line">      if (this.drawType == 0) &#123;</div><div class="line">        if (this.isClik) &#123;</div><div class="line">          //第一次点击设置标记</div><div class="line">          postionMark = new AMap.Marker(&#123;</div><div class="line">            map: _this.map,</div><div class="line">            icon: _this.markers[0].icon,</div><div class="line">            position: [</div><div class="line">              _this.markers[0].position[0],</div><div class="line">              _this.markers[0].position[1]</div><div class="line">            ],</div><div class="line">            offset: new AMap.Pixel(-12, -36)</div><div class="line">          &#125;);</div><div class="line">          postionMark.setMap(_this.map);</div><div class="line">          this.isClik = false;</div><div class="line">        &#125; else &#123;</div><div class="line">          //第二次更新标记</div><div class="line">          postionMark.setPosition([</div><div class="line">            _this.markers[0].position[0],</div><div class="line">            _this.markers[0].position[1]</div><div class="line">          ]); //更新点标记位置</div><div class="line">        &#125;</div><div class="line">      &#125; else &#123;</div><div class="line">        //多边形标记</div><div class="line">        this.markers.forEach(function(marker) &#123;</div><div class="line">          positionMarkPry = new AMap.Marker(&#123;</div><div class="line">            map: _this.map,</div><div class="line">            icon: marker.icon,</div><div class="line">            position: [marker.position[0], marker.position[1]],</div><div class="line">            offset: new AMap.Pixel(-12, -36)</div><div class="line">          &#125;);</div><div class="line">          _this.markerArray.push(positionMarkPry);</div><div class="line">          positionMarkPry.setMap(_this.map);</div><div class="line">        &#125;);</div><div class="line">      &#125;</div><div class="line">    &#125;,</div><div class="line">    drawSt() &#123;</div><div class="line">      //画围栏事件</div><div class="line">      let _this = this;</div><div class="line">      //画出围栏</div><div class="line">      if (this.drawType == 0) &#123;</div><div class="line">        //圆形类型</div><div class="line">        if (this.isdraw) &#123;</div><div class="line">          //第一个设置圆形</div><div class="line">          circle = new AMap.Circle(&#123;</div><div class="line">            center: new AMap.LngLat(</div><div class="line">              _this.markers[0].position[0],</div><div class="line">              _this.markers[0].position[1]</div><div class="line">            ), // 圆心位置</div><div class="line">            radius: _this.radius, //半径</div><div class="line">            strokeColor: &quot;#F33&quot;, //线颜色</div><div class="line">            strokeOpacity: 1, //线透明度</div><div class="line">            strokeWeight: 3, //线粗细度</div><div class="line">            fillColor: &quot;#ee2200&quot;, //填充颜色</div><div class="line">            fillOpacity: 0.35 //填充透明度</div><div class="line">          &#125;);</div><div class="line">          circle.setMap(this.map);</div><div class="line">          this.isdraw = false;</div><div class="line">        &#125; else &#123;</div><div class="line">          //更新圆形中心位置</div><div class="line">          circle.setCenter([</div><div class="line">            this.markers[0].position[0],</div><div class="line">            this.markers[0].position[1]</div><div class="line">          ]);</div><div class="line">        &#125;</div><div class="line">      &#125; else &#123;</div><div class="line">        //自定义类型</div><div class="line">        let polygonArr = new Array(); //多边形覆盖物节点坐标数组</div><div class="line">        this.markers.forEach(function(marker) &#123;</div><div class="line">          polygonArr.push([marker.position[0], marker.position[1]]);</div><div class="line">        &#125;);</div><div class="line">        polygon = new AMap.Polygon(&#123;</div><div class="line">          path: polygonArr, //设置多边形边界路径</div><div class="line">          strokeColor: &quot;#FF33FF&quot;, //线颜色</div><div class="line">          strokeOpacity: 0.2, //线透明度</div><div class="line">          strokeWeight: 3, //线宽</div><div class="line">          fillColor: &quot;#1791fc&quot;, //填充色</div><div class="line">          fillOpacity: 0.35 //填充透明度</div><div class="line">        &#125;);</div><div class="line">        polygon.setMap(this.map);</div><div class="line">      &#125;</div><div class="line">    &#125;,</div><div class="line">    drawClk(val) &#123;</div><div class="line">      //选择围栏类型</div><div class="line">      this.drawType = val.type;</div><div class="line">    &#125;,</div><div class="line">    goback() &#123;</div><div class="line">      //返回上一页</div><div class="line">      this.$router.go(-1);</div><div class="line">    &#125;,</div><div class="line">    goedit() &#123;</div><div class="line">      let datajson;</div><div class="line">      if (this.markers.length == 0) &#123;</div><div class="line">        this.toast(&quot;请先设置围栏&quot;);</div><div class="line">        return false;</div><div class="line">      &#125;</div><div class="line">      if (this.drawType == 0) &#123;</div><div class="line">        datajson = &#123;</div><div class="line">          type: this.drawType,</div><div class="line">          data: this.markers,</div><div class="line">          radius: this.radius</div><div class="line">        &#125;;</div><div class="line">      &#125; else &#123;</div><div class="line">        datajson = &#123; type: this.drawType, data: this.markers, radius: &quot;&quot; &#125;;</div><div class="line">      &#125;</div><div class="line">      this.$store.commit(&quot;setMap&quot;, datajson); //把数据存入仓库当中</div><div class="line">      this.$router.push(&#123;</div><div class="line">        path: &quot;/editMap/mapInfo_edit&quot;,</div><div class="line">        query: &#123; gid: this.$route.query.gid, name: this.mapInfo.name,id:this.$route.query.id&#125;</div><div class="line">      &#125;);</div><div class="line">    &#125;</div><div class="line">  &#125;,</div><div class="line">  watch: &#123;</div><div class="line">    radius(val) &#123;</div><div class="line">      //监听改变拖动value的值</div><div class="line">      circle.setRadius(val);</div><div class="line">    &#125;,</div><div class="line">    drawType(val) &#123;</div><div class="line">      /***</div><div class="line">       * 当this.drawType为0时切换为了圆形围栏，那么需要置空多边形。设置isClick为true,isdraw为true</div><div class="line">       *</div><div class="line">       */</div><div class="line">      console.log(this.isfirstLoding)</div><div class="line">      if (!this.isfirstLoding) &#123;</div><div class="line">        console.log(&apos;变化&apos;)</div><div class="line">        //判断是否为编辑围栏，如果为编辑围栏那么初次进入页面注销watch事件</div><div class="line">        if (this.markers.length &gt; 0) &#123;</div><div class="line">          if (val == 0) &#123;</div><div class="line">            this.map.remove(this.markerArray);</div><div class="line">            polygon.setMap(null);</div><div class="line">            this.isClik = true;</div><div class="line">            this.isdraw = true;</div><div class="line">          &#125; else &#123;</div><div class="line">            postionMark.setMap(null);</div><div class="line">            circle.setMap(null);</div><div class="line">          &#125;</div><div class="line">          this.markers = [];</div><div class="line">        &#125;</div><div class="line">      &#125;</div><div class="line">    &#125;</div><div class="line">  &#125;</div><div class="line">&#125;;</div><div class="line">&lt;/script&gt;</div></pre></td></tr></table></figure></p>
+<p>以上代码就是具体点设置地理围栏点方法，最重要点是查看API文档，高德地图里每个参数都是有写，仔细查看都能找到具体的方法。文档就写到这里，如果有什么问题可以随时在<a href="https://github.com/airzhanglin/mapCode" target="_blank" rel="external">github</a>上留言。把自己折腾的东西写出来是为了以后工作中快速找到问题点，再一个就是给自己给同样遇到问题的网友提供帮助。欢迎吐槽。。。</p>
 
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="http://chenghu.oss-cn-shanghai.aliyuncs.com/alipay.png">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="http://chenghu.oss-cn-shanghai.aliyuncs.com/wxplay.jpg">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">vue 高的地图</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://yoursite.com/2018/05/21/vue-map/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
+  
+    <a href="/2018/07/28/float-list/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          float列表两端对齐
+        
+      </div>
+    </a>
   
   
-    </div></section>
+    <a href="/2017/11/22/datatable/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">讲一讲如何使用DataTable</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+
+
+
   
 
-    
+  
 
+  
+  <div id="SOHUCS" sid="vue-map" ></div> 
+<script type="text/javascript"> 
+(function(){ 
+var appid = "cyt1o2czV"; 
+var conf = "087c94412da514618093c4664c58ffcb"; 
+var width = window.innerWidth || document.documentElement.clientWidth; 
+if (width < 960) { 
+window.document.write('<script id="changyan_mobile_js" charset="utf-8" type="text/javascript" src="http://changyan.sohu.com/upload/mobile/wap-js/changyan_mobile.js?client_id=' + appid + '&conf=' + conf + '"><\/script>'); } else { var loadJs=function(d,a){var c=document.getElementsByTagName("head")[0]||document.head||document.documentElement;var b=document.createElement("script");b.setAttribute("type","text/javascript");b.setAttribute("charset","UTF-8");b.setAttribute("src",d);if(typeof a==="function"){if(window.attachEvent){b.onreadystatechange=function(){var e=b.readyState;if(e==="loaded"||e==="complete"){b.onreadystatechange=null;a()}}}else{b.onload=a}}c.appendChild(b)};loadJs("http://changyan.sohu.com/upload/changyan.js",function(){window.changyan.api.config({appid:appid,conf:conf})}); } })(); </script>
+  
 
+  
 
 
           </div>
@@ -228,8 +411,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
