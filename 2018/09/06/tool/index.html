@@ -6,14 +6,18 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives | Lynn的博客</title>
+  <title>开发常用Js 工具函数及方法（一） | Lynn的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Lynn的博客">
-<meta property="og:url" content="http://yoursite.com/archives/index.html">
+  <meta name="description" content="工作常用的js方法，开发中方便边记录下来。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="开发常用Js 工具函数及方法（一）">
+<meta property="og:url" content="http://yoursite.com/2018/09/06/tool/index.html">
 <meta property="og:site_name" content="Lynn的博客">
+<meta property="og:description" content="工作常用的js方法，开发中方便边记录下来。">
+<meta property="og:updated_time" content="2018-09-06T13:17:35.026Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Lynn的博客">
+<meta name="twitter:title" content="开发常用Js 工具函数及方法（一）">
+<meta name="twitter:description" content="工作常用的js方法，开发中方便边记录下来。">
   
     <link rel="alternative" href="/atom.xml" title="Lynn的博客" type="application/atom+xml">
   
@@ -161,310 +165,171 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
+            <article id="post-tool" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
   
+    <h1 class="article-title" itemprop="name">
+      开发常用Js 工具函数及方法（一）
+    </h1>
   
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2018" class="archive-year">2018</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/09/06/tool/" class="archive-article-date">
+
+        
+        <a href="/2018/09/06/tool/" class="archive-article-date">
   	<time datetime="2018-09-06T13:12:16.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-09-06</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/09/06/tool/">开发常用Js 工具函数及方法（一）</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
+        
+      </header>
     
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/07/28/float-list/" class="archive-article-date">
-  	<time datetime="2018-07-28T10:12:01.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-28</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/07/28/float-list/">float列表两端对齐</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">float</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/05/21/vue-map/" class="archive-article-date">
-  	<time datetime="2018-05-21T15:08:47.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-05-21</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/05/21/vue-map/">vue高德地图</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">vue 高的地图</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
+    <div class="article-entry" itemprop="articleBody">
       
-        </div></section>
+        <p>工作常用的js方法，开发中方便边记录下来。<br><a id="more"></a></p>
+<h3 id="1-查找数组中某个对象中属性所在的位置"><a href="#1-查找数组中某个对象中属性所在的位置" class="headerlink" title="1.查找数组中某个对象中属性所在的位置"></a>1.查找数组中某个对象中属性所在的位置</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/**</span></div><div class="line"> *</div><div class="line"> * 查找数组，返回匹配到的第一个index</div><div class="line"> *</div><div class="line"> * @param array 被查找的数组</div><div class="line"> * @param feature 查找特征    或者为一个具体值，用于匹配数组遍历的值，或者为一个对象，表明所有希望被匹配的key-value</div><div class="line"> * @param or boolean 希望命中feature全部特征或者只需命中一个特征，默认true</div><div class="line"> *</div><div class="line"> * @return 数组下标  查找不到返回-1</div><div class="line"> */</div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">findArray</span>(<span class="params">array, feature</span>) </span>&#123;</div><div class="line">    <span class="keyword">var</span> all = <span class="built_in">arguments</span>.length &gt; <span class="number">2</span> &amp;&amp; <span class="built_in">arguments</span>[<span class="number">2</span>] !== <span class="literal">undefined</span> ? <span class="built_in">arguments</span>[<span class="number">2</span>] : <span class="literal">true</span>;</div><div class="line">    <span class="keyword">for</span> (<span class="keyword">var</span> index <span class="keyword">in</span> array) &#123;</div><div class="line">        <span class="keyword">var</span> cur = array[index];</div><div class="line">        <span class="keyword">if</span> (feature <span class="keyword">instanceof</span> <span class="built_in">Object</span>) &#123;</div><div class="line">            <span class="keyword">var</span> allRight = <span class="literal">true</span>;</div><div class="line">            <span class="keyword">for</span> (<span class="keyword">var</span> key <span class="keyword">in</span> feature) &#123;</div><div class="line">                <span class="keyword">var</span> value = feature[key];</div><div class="line">                <span class="keyword">if</span> (cur[key] == value &amp;&amp; !all) <span class="keyword">return</span> index;</div><div class="line">                <span class="keyword">if</span> (all &amp;&amp; cur[key] != value) &#123;</div><div class="line">                    allRight = <span class="literal">false</span>;</div><div class="line">                    <span class="keyword">break</span>;</div><div class="line">                &#125;</div><div class="line">            &#125;</div><div class="line">            <span class="keyword">if</span> (allRight) <span class="keyword">return</span> index;</div><div class="line">        &#125; <span class="keyword">else</span> &#123;</div><div class="line">            <span class="keyword">if</span> (cur == feature) &#123;</div><div class="line">                <span class="keyword">return</span> index;</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> <span class="number">-1</span>;</div><div class="line">&#125;</div><div class="line"><span class="comment">//使用方法</span></div><div class="line"><span class="keyword">var</span> list=[&#123;<span class="attr">id</span>:<span class="number">1</span>,<span class="attr">name</span>:<span class="string">'a'</span>&#125;,&#123;<span class="attr">id</span>:<span class="number">2</span>,<span class="attr">name</span>:<span class="string">'b'</span>&#125;],</div><div class="line">findIndex = findArray(list,&#123;<span class="attr">id</span>:<span class="number">1</span>&#125;)</div></pre></td></tr></table></figure>
+<h3 id="2-判断是否在微信、uc-qq浏览器中打开页面"><a href="#2-判断是否在微信、uc-qq浏览器中打开页面" class="headerlink" title="2. 判断是否在微信、uc/qq浏览器中打开页面"></a>2. 判断是否在微信、uc/qq浏览器中打开页面</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> ua = <span class="built_in">window</span>.navigator.userAgent.toLowerCase();</div><div class="line">  <span class="keyword">if</span>(ua.match(<span class="regexp">/MicroMessenger/i</span>) == <span class="string">'micromessenger'</span>)&#123;</div><div class="line">     alert(<span class="string">'微信'</span>);</div><div class="line">  &#125;</div><div class="line">  <span class="keyword">if</span>(navigator.userAgent.indexOf(<span class="string">'UCBrowser'</span>) &gt; <span class="number">-1</span>) &#123;</div><div class="line">    alert(<span class="string">"uc浏览器"</span>);</div><div class="line">  &#125;</div><div class="line">   <span class="keyword">if</span>(navigator.userAgent.indexOf(<span class="string">'QQBrowser'</span>) &gt; <span class="number">-1</span>) &#123;</div><div class="line">    alert(<span class="string">"qq浏览器"</span>);</div><div class="line">  &#125;</div></pre></td></tr></table></figure>
+<h3 id="3-判断是设备"><a href="#3-判断是设备" class="headerlink" title="3. 判断是设备"></a>3. 判断是设备</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//判断设备</span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">IsPC</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="keyword">var</span> userAgentInfo = navigator.userAgent;</div><div class="line">    <span class="keyword">var</span> Agents = [<span class="string">"Android"</span>, <span class="string">"iPhone"</span>,</div><div class="line">                <span class="string">"SymbianOS"</span>, <span class="string">"Windows Phone"</span>,</div><div class="line">                <span class="string">"iPad"</span>, <span class="string">"iPod"</span>];</div><div class="line">    <span class="keyword">var</span> flag = <span class="literal">true</span>;</div><div class="line">    <span class="keyword">for</span> (<span class="keyword">var</span> v = <span class="number">0</span>; v &lt; Agents.length; v++) &#123;</div><div class="line">        <span class="keyword">if</span> (userAgentInfo.indexOf(Agents[v]) &gt; <span class="number">0</span>) &#123;</div><div class="line">            flag = <span class="literal">false</span>;</div><div class="line">            <span class="keyword">break</span>;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> flag;</div><div class="line">&#125;</div><div class="line"> </div><div class="line"><span class="keyword">var</span> flag = IsPC(); <span class="comment">//true为PC端，false为手机端</span></div><div class="line"><span class="comment">//判断是ios设备还是Android设备</span></div><div class="line"> <span class="keyword">var</span> ua = navigator.userAgent.toLowerCase();<span class="comment">//获取当前设备信息</span></div><div class="line">    <span class="keyword">if</span> (<span class="regexp">/iphone|ipad|ipod/</span>.test(ua)) &#123;<span class="comment">//如果是ios</span></div><div class="line">     </div><div class="line">    &#125; <span class="keyword">else</span> <span class="keyword">if</span> (<span class="regexp">/android/</span>.test(ua)) &#123;<span class="comment">//安卓</span></div><div class="line">      </div><div class="line">    &#125;</div></pre></td></tr></table></figure>
+<h3 id="4-时间戳和日期字符串相互转换"><a href="#4-时间戳和日期字符串相互转换" class="headerlink" title="4.时间戳和日期字符串相互转换"></a>4.时间戳和日期字符串相互转换</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 获取当前时间戳(以s为单位)</span></div><div class="line"><span class="keyword">var</span> timestamp = <span class="built_in">Date</span>.parse(<span class="keyword">new</span> <span class="built_in">Date</span>());</div><div class="line">timestamp = timestamp / <span class="number">1000</span>;</div><div class="line"><span class="comment">//当前时间戳为：1403149534</span></div><div class="line"><span class="built_in">console</span>.log(<span class="string">"当前时间戳为："</span> + timestamp);</div><div class="line"></div><div class="line"><span class="comment">// 获取某个时间格式的时间戳</span></div><div class="line"><span class="keyword">var</span> stringTime = <span class="string">"2014-07-10 10:21:12"</span>;</div><div class="line"><span class="keyword">var</span> timestamp2 = <span class="built_in">Date</span>.parse(<span class="keyword">new</span> <span class="built_in">Date</span>(stringTime));</div><div class="line"><span class="comment">// 如果想获取的时间戳为13位那就不用除1000</span></div><div class="line">timestamp2 = timestamp2 / <span class="number">1000</span>;</div><div class="line"><span class="comment">//2014-07-10 10:21:12的时间戳为：1404958872 </span></div><div class="line"><span class="built_in">console</span>.log(stringTime + <span class="string">"的时间戳为："</span> + timestamp2);</div><div class="line"></div><div class="line"><span class="comment">// 将当前时间换成时间格式字符串</span></div><div class="line"><span class="keyword">var</span> timestamp3 = <span class="number">1403058804</span>;</div><div class="line"><span class="keyword">var</span> newDate = <span class="keyword">new</span> <span class="built_in">Date</span>();</div><div class="line">newDate.setTime(timestamp3 * <span class="number">1000</span>);</div><div class="line"><span class="comment">// Wed Jun 18 2014 </span></div><div class="line"><span class="built_in">console</span>.log(newDate.toDateString());</div><div class="line"><span class="comment">// Wed, 18 Jun 2014 02:33:24 GMT </span></div><div class="line"><span class="built_in">console</span>.log(newDate.toGMTString());</div><div class="line"><span class="comment">// 2014-06-18T02:33:24.000Z</span></div><div class="line"><span class="built_in">console</span>.log(newDate.toISOString());</div><div class="line"><span class="comment">// 2014-06-18T02:33:24.000Z </span></div><div class="line"><span class="built_in">console</span>.log(newDate.toJSON());</div><div class="line"><span class="comment">// 2014年6月18日 </span></div><div class="line"><span class="built_in">console</span>.log(newDate.toLocaleDateString());</div><div class="line"><span class="comment">// 2014年6月18日 上午10:33:24 </span></div><div class="line"><span class="built_in">console</span>.log(newDate.toLocaleString());</div><div class="line"><span class="comment">// 上午10:33:24 </span></div><div class="line"><span class="built_in">console</span>.log(newDate.toLocaleTimeString());</div><div class="line"><span class="comment">// Wed Jun 18 2014 10:33:24 GMT+0800 (中国标准时间)</span></div><div class="line"><span class="built_in">console</span>.log(newDate.toString());</div><div class="line"><span class="comment">// 10:33:24 GMT+0800 (中国标准时间) </span></div><div class="line"><span class="built_in">console</span>.log(newDate.toTimeString());</div><div class="line"><span class="comment">// Wed, 18 Jun 2014 02:33:24 GMT</span></div><div class="line"><span class="built_in">console</span>.log(newDate.toUTCString());</div><div class="line"></div><div class="line"><span class="built_in">Date</span>.prototype.format = <span class="function"><span class="keyword">function</span>(<span class="params">format</span>) </span>&#123;</div><div class="line">       <span class="keyword">var</span> date = &#123;</div><div class="line">              <span class="string">"M+"</span>: <span class="keyword">this</span>.getMonth() + <span class="number">1</span>,</div><div class="line">              <span class="string">"d+"</span>: <span class="keyword">this</span>.getDate(),</div><div class="line">              <span class="string">"h+"</span>: <span class="keyword">this</span>.getHours(),</div><div class="line">              <span class="string">"m+"</span>: <span class="keyword">this</span>.getMinutes(),</div><div class="line">              <span class="string">"s+"</span>: <span class="keyword">this</span>.getSeconds(),</div><div class="line">              <span class="string">"q+"</span>: <span class="built_in">Math</span>.floor((<span class="keyword">this</span>.getMonth() + <span class="number">3</span>) / <span class="number">3</span>),</div><div class="line">              <span class="string">"S+"</span>: <span class="keyword">this</span>.getMilliseconds()</div><div class="line">       &#125;;</div><div class="line">       <span class="keyword">if</span> (<span class="regexp">/(y+)/i</span>.test(format)) &#123;</div><div class="line">              format = format.replace(<span class="built_in">RegExp</span>.$<span class="number">1</span>, (<span class="keyword">this</span>.getFullYear() + <span class="string">''</span>).substr(<span class="number">4</span> - <span class="built_in">RegExp</span>.$<span class="number">1.</span>length));</div><div class="line">       &#125;</div><div class="line">       <span class="keyword">for</span> (<span class="keyword">var</span> k <span class="keyword">in</span> date) &#123;</div><div class="line">              <span class="keyword">if</span> (<span class="keyword">new</span> <span class="built_in">RegExp</span>(<span class="string">"("</span> + k + <span class="string">")"</span>).test(format)) &#123;</div><div class="line">                     format = format.replace(<span class="built_in">RegExp</span>.$<span class="number">1</span>, <span class="built_in">RegExp</span>.$<span class="number">1.</span>length == <span class="number">1</span></div><div class="line">                            ? date[k] : (<span class="string">"00"</span> + date[k]).substr((<span class="string">""</span> + date[k]).length));</div><div class="line">              &#125;</div><div class="line">       &#125;</div><div class="line">       <span class="keyword">return</span> format;</div><div class="line">&#125;</div><div class="line"><span class="built_in">console</span>.log(newDate.format(<span class="string">'yyyy-MM-dd h:m:s'</span>));</div></pre></td></tr></table></figure>
+<p><a href="https://www.zhanglin168.cn/demo/time_tool.html" target="_blank" rel="external">时间戳转日期工具</a></p>
+<h3 id="6-时间差计算"><a href="#6-时间差计算" class="headerlink" title="6. 时间差计算"></a>6. 时间差计算</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div></pre></td><td class="code"><pre><div class="line">function timeAgo()&#123;</div><div class="line">   let timetamp = dateTimeStamp.replace(/\-/g, &quot;/&quot;)</div><div class="line">     let minute = 1000 * 60</div><div class="line">     let hour = minute * 60</div><div class="line">     let day = hour * 24</div><div class="line">     let month = day * 30</div><div class="line">     let now = new Date().getTime()</div><div class="line">     let diffValue = now - (parseInt(Date.parse(new Date(timetamp))))</div><div class="line">     if (diffValue &lt; 0) &#123;</div><div class="line">       // alert(&apos;结束日期不能小于开始日期！&apos;)</div><div class="line">     &#125;</div><div class="line">     let monthC = diffValue / month</div><div class="line">     let weekC = diffValue / (7 * day)</div><div class="line">     let dayC = diffValue / day</div><div class="line">     let hourC = diffValue / hour</div><div class="line">     let minC = diffValue / minute</div><div class="line">     let result</div><div class="line">     if (monthC &gt;= 1) &#123;</div><div class="line">       result = parseInt(monthC) + &apos;个月前&apos;</div><div class="line">     &#125; else if (weekC &gt;= 1) &#123;</div><div class="line">       result = parseInt(weekC) + &apos;周前&apos;</div><div class="line">     &#125; else if (dayC &gt;= 1) &#123;</div><div class="line">       result = parseInt(dayC) + &apos;天前&apos;</div><div class="line">     &#125; else if (hourC &gt;= 1) &#123;</div><div class="line">       result = parseInt(hourC) + &apos;个小时前&apos;</div><div class="line">     &#125; else if (minC &gt;= 1) &#123;</div><div class="line">       result = parseInt(minC) + &apos;分钟前&apos;</div><div class="line">     &#125; else &#123;</div><div class="line">       result = &apos;刚刚&apos;</div><div class="line">     &#125;</div><div class="line">     return result</div><div class="line">&#125;</div><div class="line">timeAgo(&apos;2018-08-20 16:39:05&apos;)</div></pre></td></tr></table></figure>
+<h3 id="7-获取地址栏参数"><a href="#7-获取地址栏参数" class="headerlink" title="7. 获取地址栏参数"></a>7. 获取地址栏参数</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/**</span></div><div class="line"> *   js正则获取地址栏的参数值（key -- value）</div><div class="line"> */</div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">GetQueryString</span>(<span class="params">name</span>) </span>&#123;</div><div class="line">    <span class="keyword">var</span> reg = <span class="keyword">new</span> <span class="built_in">RegExp</span>(<span class="string">"(^|&amp;)"</span> + name + <span class="string">"=([^&amp;]*)(&amp;|$)"</span>);</div><div class="line">    <span class="keyword">var</span> r = <span class="built_in">window</span>.location.search.substr(<span class="number">1</span>).match(reg);</div><div class="line">    <span class="keyword">if</span> (r != <span class="literal">null</span>) <span class="keyword">return</span> <span class="built_in">unescape</span>(r[<span class="number">2</span>]);</div><div class="line">    <span class="keyword">return</span> <span class="literal">null</span>;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">//使用</span></div><div class="line"><span class="keyword">var</span> path = http:<span class="comment">//www.baidu.com?id=1;</span></div><div class="line"><span class="built_in">console</span>.log(GetQueryString(id));<span class="comment">// 1</span></div></pre></td></tr></table></figure>
+<h3 id="8-常用正则"><a href="#8-常用正则" class="headerlink" title="8.常用正则"></a>8.常用正则</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="comment">//邮箱校验</span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">emailCheck</span>(<span class="params">email</span>)</span>&#123;</div><div class="line">     <span class="keyword">let</span> reg = <span class="regexp">/^([0-9A-Za-z\-_\.]+)@([0-9a-z]+\.[a-z]&#123;2,3&#125;(\.[a-z]&#123;2&#125;)?)$/g</span>;</div><div class="line">        <span class="keyword">if</span> (!reg.test(email)) &#123;</div><div class="line">          <span class="keyword">return</span> <span class="literal">false</span>;</div><div class="line">        &#125; <span class="keyword">else</span> &#123;</div><div class="line">          <span class="keyword">return</span> <span class="literal">true</span>;</div><div class="line">        &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">//手机号码校验</span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">phoneCheck</span>(<span class="params">value</span>)</span>&#123;</div><div class="line">     <span class="keyword">let</span> telreg = <span class="regexp">/^[1][3,4,5,7,8][0-9]&#123;9&#125;$/</span>;</div><div class="line">         <span class="keyword">if</span>(!telreg.test(value))&#123;</div><div class="line">          <span class="keyword">return</span> <span class="literal">false</span>;</div><div class="line">        &#125; <span class="keyword">else</span> &#123;</div><div class="line">          <span class="keyword">return</span> <span class="literal">true</span>;</div><div class="line">        &#125;</div><div class="line">&#125;</div><div class="line"><span class="comment">//座机号码校验</span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">telphone</span>(<span class="params"></span>)</span>&#123;</div><div class="line">    <span class="keyword">var</span> regex = <span class="regexp">/^0\d&#123;2,3&#125;-?\d&#123;7,8&#125;$/</span>; </div><div class="line">     <span class="keyword">if</span> (!regex.test(val)) &#123;</div><div class="line">          <span class="keyword">return</span> <span class="literal">false</span></div><div class="line">     &#125;<span class="keyword">else</span>&#123;</div><div class="line">          <span class="keyword">return</span> <span class="literal">true</span>;</div><div class="line">     &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">//6-20密码 数字和字母组成的密码</span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">passwordCheck</span>(<span class="params">value</span>)</span>&#123;</div><div class="line">      <span class="keyword">var</span> reg = <span class="regexp">/^[1][3,4,5,7,8][0-9]&#123;9&#125;$/</span>;</div><div class="line">     <span class="keyword">if</span>(!reg.test(value))&#123;</div><div class="line">            <span class="keyword">return</span> <span class="literal">false</span>;</div><div class="line">        &#125; <span class="keyword">else</span> &#123;</div><div class="line">          <span class="keyword">return</span> <span class="literal">true</span>;</div><div class="line">        &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="9-身份证校验"><a href="#9-身份证校验" class="headerlink" title="9. 身份证校验"></a>9. 身份证校验</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">IdentityCodeValid</span>(<span class="params">code</span>)</span>&#123;</div><div class="line">     <span class="keyword">var</span> city = &#123;</div><div class="line">        <span class="number">11</span>: <span class="string">"北京"</span>,</div><div class="line">        <span class="number">12</span>: <span class="string">"天津"</span>,</div><div class="line">        <span class="number">13</span>: <span class="string">"河北"</span>,</div><div class="line">        <span class="number">14</span>: <span class="string">"山西"</span>,</div><div class="line">        <span class="number">15</span>: <span class="string">"内蒙古"</span>,</div><div class="line">        <span class="number">21</span>: <span class="string">"辽宁"</span>,</div><div class="line">        <span class="number">22</span>: <span class="string">"吉林"</span>,</div><div class="line">        <span class="number">23</span>: <span class="string">"黑龙江 "</span>,</div><div class="line">        <span class="number">31</span>: <span class="string">"上海"</span>,</div><div class="line">        <span class="number">32</span>: <span class="string">"江苏"</span>,</div><div class="line">        <span class="number">33</span>: <span class="string">"浙江"</span>,</div><div class="line">        <span class="number">34</span>: <span class="string">"安徽"</span>,</div><div class="line">        <span class="number">35</span>: <span class="string">"福建"</span>,</div><div class="line">        <span class="number">36</span>: <span class="string">"江西"</span>,</div><div class="line">        <span class="number">37</span>: <span class="string">"山东"</span>,</div><div class="line">        <span class="number">41</span>: <span class="string">"河南"</span>,</div><div class="line">        <span class="number">42</span>: <span class="string">"湖北 "</span>,</div><div class="line">        <span class="number">43</span>: <span class="string">"湖南"</span>,</div><div class="line">        <span class="number">44</span>: <span class="string">"广东"</span>,</div><div class="line">        <span class="number">45</span>: <span class="string">"广西"</span>,</div><div class="line">        <span class="number">46</span>: <span class="string">"海南"</span>,</div><div class="line">        <span class="number">50</span>: <span class="string">"重庆"</span>,</div><div class="line">        <span class="number">51</span>: <span class="string">"四川"</span>,</div><div class="line">        <span class="number">52</span>: <span class="string">"贵州"</span>,</div><div class="line">        <span class="number">53</span>: <span class="string">"云南"</span>,</div><div class="line">        <span class="number">54</span>: <span class="string">"西藏 "</span>,</div><div class="line">        <span class="number">61</span>: <span class="string">"陕西"</span>,</div><div class="line">        <span class="number">62</span>: <span class="string">"甘肃"</span>,</div><div class="line">        <span class="number">63</span>: <span class="string">"青海"</span>,</div><div class="line">        <span class="number">64</span>: <span class="string">"宁夏"</span>,</div><div class="line">        <span class="number">65</span>: <span class="string">"新疆"</span>,</div><div class="line">        <span class="number">71</span>: <span class="string">"台湾"</span>,</div><div class="line">        <span class="number">81</span>: <span class="string">"香港"</span>,</div><div class="line">        <span class="number">82</span>: <span class="string">"澳门"</span>,</div><div class="line">        <span class="number">91</span>: <span class="string">"国外 "</span></div><div class="line">      &#125;;</div><div class="line">      <span class="keyword">var</span> tip = <span class="string">""</span>;</div><div class="line">      <span class="keyword">var</span> pass = <span class="literal">true</span>;</div><div class="line">      <span class="keyword">if</span> (code === <span class="string">""</span>) &#123;</div><div class="line">        <span class="keyword">return</span> <span class="literal">true</span>;</div><div class="line">      &#125;</div><div class="line">      <span class="keyword">if</span> (</div><div class="line">        !code ||</div><div class="line">        !<span class="regexp">/^\d&#123;6&#125;(18|19|20)?\d&#123;2&#125;(0[1-9]|1[012])(0[1-9]|[12]\d|3[01])\d&#123;3&#125;(\d|X)$/i</span>.test(</div><div class="line">          code</div><div class="line">        )</div><div class="line">      ) &#123;</div><div class="line">        tip = <span class="string">"身份证号格式错误"</span>;</div><div class="line">        pass = <span class="literal">false</span>;</div><div class="line">      &#125; <span class="keyword">else</span> <span class="keyword">if</span> (!city[code.substr(<span class="number">0</span>, <span class="number">2</span>)]) &#123;</div><div class="line">        tip = <span class="string">"地址编码错误"</span>;</div><div class="line">        pass = <span class="literal">false</span>;</div><div class="line">      &#125; <span class="keyword">else</span> &#123;</div><div class="line">        <span class="comment">//18位身份证需要验证最后一位校验位</span></div><div class="line">        <span class="keyword">if</span> (code.length == <span class="number">18</span>) &#123;</div><div class="line">          code = code.split(<span class="string">""</span>);</div><div class="line">          <span class="comment">//∑(ai×Wi)(mod 11)</span></div><div class="line">          <span class="comment">//加权因子</span></div><div class="line">          <span class="keyword">var</span> factor = [<span class="number">7</span>, <span class="number">9</span>, <span class="number">10</span>, <span class="number">5</span>, <span class="number">8</span>, <span class="number">4</span>, <span class="number">2</span>, <span class="number">1</span>, <span class="number">6</span>, <span class="number">3</span>, <span class="number">7</span>, <span class="number">9</span>, <span class="number">10</span>, <span class="number">5</span>, <span class="number">8</span>, <span class="number">4</span>, <span class="number">2</span>];</div><div class="line">          <span class="comment">//校验位</span></div><div class="line">          <span class="keyword">var</span> parity = [<span class="number">1</span>, <span class="number">0</span>, <span class="string">"X"</span>, <span class="number">9</span>, <span class="number">8</span>, <span class="number">7</span>, <span class="number">6</span>, <span class="number">5</span>, <span class="number">4</span>, <span class="number">3</span>, <span class="number">2</span>];</div><div class="line">          <span class="keyword">var</span> sum = <span class="number">0</span>;</div><div class="line">          <span class="keyword">var</span> ai = <span class="number">0</span>;</div><div class="line">          <span class="keyword">var</span> wi = <span class="number">0</span>;</div><div class="line">          <span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; <span class="number">17</span>; i++) &#123;</div><div class="line">            ai = code[i];</div><div class="line">            wi = factor[i];</div><div class="line">            sum += ai * wi;</div><div class="line">          &#125;</div><div class="line">          <span class="keyword">var</span> last = parity[sum % <span class="number">11</span>];</div><div class="line">          <span class="keyword">if</span> (parity[sum % <span class="number">11</span>] != code[<span class="number">17</span>]) &#123;</div><div class="line">            tip = <span class="string">"身份证输入错误"</span>;</div><div class="line">            pass = <span class="literal">false</span>;</div><div class="line">          &#125;</div><div class="line">        &#125;</div><div class="line">      &#125;</div><div class="line">      <span class="keyword">if</span> (!pass)</div><div class="line">       alert(tip)</div><div class="line">      <span class="keyword">return</span> pass;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<hr>
+<h3 id="10-银行卡校验"><a href="#10-银行卡校验" class="headerlink" title="10.银行卡校验"></a>10.银行卡校验</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">luhmCheck</span>(<span class="params"></span>)</span>&#123;</div><div class="line">    <span class="keyword">var</span> lastNum = bankno.substr(bankno.length - <span class="number">1</span>, <span class="number">1</span>); <span class="comment">//取出最后一位（与luhm进行比较）</span></div><div class="line">      <span class="keyword">var</span> first15Num = bankno.substr(<span class="number">0</span>, bankno.length - <span class="number">1</span>); <span class="comment">//前15或18位</span></div><div class="line">      <span class="keyword">var</span> newArr = <span class="keyword">new</span> <span class="built_in">Array</span>();</div><div class="line">      <span class="keyword">for</span> (<span class="keyword">var</span> i = first15Num.length - <span class="number">1</span>; i &gt; <span class="number">-1</span>; i--) &#123;</div><div class="line">        <span class="comment">//前15或18位倒序存进数组</span></div><div class="line">        newArr.push(first15Num.substr(i, <span class="number">1</span>));</div><div class="line">      &#125;</div><div class="line">      <span class="keyword">var</span> arrJiShu = <span class="keyword">new</span> <span class="built_in">Array</span>(); <span class="comment">//奇数位*2的积 &lt;9</span></div><div class="line">      <span class="keyword">var</span> arrJiShu2 = <span class="keyword">new</span> <span class="built_in">Array</span>(); <span class="comment">//奇数位*2的积 &gt;9</span></div><div class="line"></div><div class="line">      <span class="keyword">var</span> arrOuShu = <span class="keyword">new</span> <span class="built_in">Array</span>(); <span class="comment">//偶数位数组</span></div><div class="line">      <span class="keyword">for</span> (<span class="keyword">var</span> j = <span class="number">0</span>; j &lt; newArr.length; j++) &#123;</div><div class="line">        <span class="keyword">if</span> ((j + <span class="number">1</span>) % <span class="number">2</span> == <span class="number">1</span>) &#123;</div><div class="line">          <span class="comment">//奇数位</span></div><div class="line">          <span class="keyword">if</span> (<span class="built_in">parseInt</span>(newArr[j]) * <span class="number">2</span> &lt; <span class="number">9</span>)</div><div class="line">            arrJiShu.push(<span class="built_in">parseInt</span>(newArr[j]) * <span class="number">2</span>);</div><div class="line">          <span class="keyword">else</span> arrJiShu2.push(<span class="built_in">parseInt</span>(newArr[j]) * <span class="number">2</span>);</div><div class="line">        &#125; <span class="keyword">else</span> arrOuShu.push(newArr[j]); <span class="comment">//偶数位</span></div><div class="line">      &#125;</div><div class="line"></div><div class="line">      <span class="keyword">var</span> jishu_child1 = <span class="keyword">new</span> <span class="built_in">Array</span>(); <span class="comment">//奇数位*2 &gt;9 的分割之后的数组个位数</span></div><div class="line">      <span class="keyword">var</span> jishu_child2 = <span class="keyword">new</span> <span class="built_in">Array</span>(); <span class="comment">//奇数位*2 &gt;9 的分割之后的数组十位数</span></div><div class="line">      <span class="keyword">for</span> (<span class="keyword">var</span> h = <span class="number">0</span>; h &lt; arrJiShu2.length; h++) &#123;</div><div class="line">        jishu_child1.push(<span class="built_in">parseInt</span>(arrJiShu2[h]) % <span class="number">10</span>);</div><div class="line">        jishu_child2.push(<span class="built_in">parseInt</span>(arrJiShu2[h]) / <span class="number">10</span>);</div><div class="line">      &#125;</div><div class="line"></div><div class="line">      <span class="keyword">var</span> sumJiShu = <span class="number">0</span>; <span class="comment">//奇数位*2 &lt; 9 的数组之和</span></div><div class="line">      <span class="keyword">var</span> sumOuShu = <span class="number">0</span>; <span class="comment">//偶数位数组之和</span></div><div class="line">      <span class="keyword">var</span> sumJiShuChild1 = <span class="number">0</span>; <span class="comment">//奇数位*2 &gt;9 的分割之后的数组个位数之和</span></div><div class="line">      <span class="keyword">var</span> sumJiShuChild2 = <span class="number">0</span>; <span class="comment">//奇数位*2 &gt;9 的分割之后的数组十位数之和</span></div><div class="line">      <span class="keyword">var</span> sumTotal = <span class="number">0</span>;</div><div class="line">      <span class="keyword">for</span> (<span class="keyword">var</span> m = <span class="number">0</span>; m &lt; arrJiShu.length; m++) &#123;</div><div class="line">        sumJiShu = sumJiShu + <span class="built_in">parseInt</span>(arrJiShu[m]);</div><div class="line">      &#125;</div><div class="line"></div><div class="line">      <span class="keyword">for</span> (<span class="keyword">var</span> n = <span class="number">0</span>; n &lt; arrOuShu.length; n++) &#123;</div><div class="line">        sumOuShu = sumOuShu + <span class="built_in">parseInt</span>(arrOuShu[n]);</div><div class="line">      &#125;</div><div class="line"></div><div class="line">      <span class="keyword">for</span> (<span class="keyword">var</span> p = <span class="number">0</span>; p &lt; jishu_child1.length; p++) &#123;</div><div class="line">        sumJiShuChild1 = sumJiShuChild1 + <span class="built_in">parseInt</span>(jishu_child1[p]);</div><div class="line">        sumJiShuChild2 = sumJiShuChild2 + <span class="built_in">parseInt</span>(jishu_child2[p]);</div><div class="line">      &#125;</div><div class="line">      <span class="comment">//计算总和</span></div><div class="line">      sumTotal =</div><div class="line">        <span class="built_in">parseInt</span>(sumJiShu) +</div><div class="line">        <span class="built_in">parseInt</span>(sumOuShu) +</div><div class="line">        <span class="built_in">parseInt</span>(sumJiShuChild1) +</div><div class="line">        <span class="built_in">parseInt</span>(sumJiShuChild2);</div><div class="line"></div><div class="line">      <span class="comment">//计算Luhm值</span></div><div class="line">      <span class="keyword">var</span> k = <span class="built_in">parseInt</span>(sumTotal) % <span class="number">10</span> == <span class="number">0</span> ? <span class="number">10</span> : <span class="built_in">parseInt</span>(sumTotal) % <span class="number">10</span>;</div><div class="line">      <span class="keyword">var</span> luhm = <span class="number">10</span> - k;</div><div class="line"></div><div class="line">      <span class="keyword">if</span> (lastNum == luhm &amp;&amp; lastNum.length != <span class="number">0</span>) &#123;</div><div class="line">        <span class="keyword">return</span> <span class="literal">true</span>;</div><div class="line">      &#125; <span class="keyword">else</span> &#123;</div><div class="line">       alert(<span class="string">'银行卡号必须符合Luhm校验'</span>);</div><div class="line">        <span class="keyword">return</span> <span class="literal">false</span>;</div><div class="line">      &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="11-字符长度"><a href="#11-字符长度" class="headerlink" title="11.字符长度"></a>11.字符长度</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">getByteLen</span>(<span class="params">val</span>) </span>&#123;</div><div class="line">    <span class="keyword">var</span> len = <span class="number">0</span>;</div><div class="line">    <span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; val.length; i++) &#123;</div><div class="line">        <span class="keyword">var</span> a = val.charAt(i);</div><div class="line">        <span class="comment">// console.log('a',a);</span></div><div class="line">        <span class="keyword">if</span> (a.match(<span class="regexp">/[^\x00-\xff]/ig</span>) != <span class="literal">null</span>) &#123;</div><div class="line">            len += <span class="number">2</span>;</div><div class="line">        &#125; <span class="keyword">else</span> &#123;</div><div class="line">            len += <span class="number">1</span>;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">return</span> len;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="12-禁止页面鼠标右键和复制、粘贴事件"><a href="#12-禁止页面鼠标右键和复制、粘贴事件" class="headerlink" title="12.禁止页面鼠标右键和复制、粘贴事件"></a>12.禁止页面鼠标右键和复制、粘贴事件</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="built_in">document</span>.oncontextmenu=<span class="function"><span class="keyword">function</span>(<span class="params">e</span>)</span>&#123;<span class="keyword">return</span> <span class="literal">false</span>;&#125;;</div><div class="line"><span class="built_in">document</span>.oncopy=<span class="function"><span class="keyword">function</span>(<span class="params">e</span>)</span>&#123;<span class="keyword">return</span> <span class="literal">false</span>;&#125;;</div><div class="line"><span class="comment">// 禁用Ctrl+C和Ctrl+V（所有浏览器均支持）</span></div><div class="line">$(<span class="built_in">document</span>).keydown(<span class="function"><span class="keyword">function</span>(<span class="params">e</span>) </span>&#123;</div><div class="line">    <span class="keyword">if</span>(e.ctrlKey &amp;&amp; (e.keyCode == <span class="number">65</span> || e.keyCode == <span class="number">67</span>)) &#123;</div><div class="line">        <span class="keyword">return</span> <span class="literal">false</span>;</div><div class="line">    &#125;</div><div class="line">&#125;);</div><div class="line"><span class="comment">//禁止文字选中</span></div><div class="line"><span class="built_in">document</span>.body.onselectstart = <span class="built_in">document</span>.body.ondrag = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">    <span class="keyword">return</span> <span class="literal">false</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="http://chenghu.oss-cn-shanghai.aliyuncs.com/alipay.png">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="http://chenghu.oss-cn-shanghai.aliyuncs.com/wxplay.jpg">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
       
       
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2017" class="archive-year">2017</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/11/22/datatable/" class="archive-article-date">
-  	<time datetime="2017-11-22T13:54:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-11-22</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/11/22/datatable/">讲一讲如何使用DataTable</a>
-    </h1>
-  
+      
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">jqdatatable</a>
-        		</li>
-      		
-		</ul>
-	</div>
+      
 
-          
-
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://yoursite.com/2018/09/06/tool/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/11/05/2017-11-5相册教程/" class="archive-article-date">
-  	<time datetime="2017-11-05T14:27:35.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-11-05</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/11/05/2017-11-5相册教程/">hexo Yilia 主题如何添加相册功能</a>
-    </h1>
-  
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/07/25/vue-ueditor/" class="archive-article-date">
-  	<time datetime="2017-07-25T13:54:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-07-25</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/07/25/vue-ueditor/">vue集成百度Ueditor富文本编辑器</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/07/25/es6_aticle/" class="archive-article-date">
-  	<time datetime="2017-07-24T16:28:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-07-25</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/07/25/es6_aticle/">简单的讲一讲es6常用的特性</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/06/19/new-article/" class="archive-article-date">
-  	<time datetime="2017-06-19T13:41:03.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-06-19</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/06/19/new-article/">想要提升移动网页的加载速度？你可以Get这些技能</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/05/20/欢迎来到我的博客/" class="archive-article-date">
-  	<time datetime="2017-05-20T07:26:50.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-05-20</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/05/20/欢迎来到我的博客/">欢迎来到我的博客</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
+<nav id="article-nav">
   
   
-    </div></section>
+    <a href="/2018/07/28/float-list/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">float列表两端对齐</div>
+      <i class="icon-circle-right"></i>
+    </a>
   
-
-    
+</nav>
 
 
+
+
+
+  
+
+  
+
+  
+  <div id="SOHUCS" sid="tool" ></div> 
+<script type="text/javascript"> 
+(function(){ 
+var appid = "cyt1o2czV"; 
+var conf = "087c94412da514618093c4664c58ffcb"; 
+var width = window.innerWidth || document.documentElement.clientWidth; 
+if (width < 960) { 
+window.document.write('<script id="changyan_mobile_js" charset="utf-8" type="text/javascript" src="http://changyan.sohu.com/upload/mobile/wap-js/changyan_mobile.js?client_id=' + appid + '&conf=' + conf + '"><\/script>'); } else { var loadJs=function(d,a){var c=document.getElementsByTagName("head")[0]||document.head||document.documentElement;var b=document.createElement("script");b.setAttribute("type","text/javascript");b.setAttribute("charset","UTF-8");b.setAttribute("src",d);if(typeof a==="function"){if(window.attachEvent){b.onreadystatechange=function(){var e=b.readyState;if(e==="loaded"||e==="complete"){b.onreadystatechange=null;a()}}}else{b.onload=a}}c.appendChild(b)};loadJs("http://changyan.sohu.com/upload/changyan.js",function(){window.changyan.api.config({appid:appid,conf:conf})}); } })(); </script>
+  
+
+  
 
 
           </div>
@@ -487,8 +352,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
