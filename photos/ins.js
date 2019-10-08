@@ -116,8 +116,8 @@
         var data = res.list[j].arr;
         var liTmpl = "";
         for (var i = 0, len = data.link.length; i < len; i++) {
-          var minSrc = 'http://oyw325zzy.bkt.clouddn.com/min_photos/' + data.link[i];
-          var src = 'http://oyw325zzy.bkt.clouddn.com/photos/' + data.link[i];
+          var minSrc = 'https://chenghu.oss-cn-shanghai.aliyuncs.com/blog/min_photos/' + data.link[i];
+          var src = 'https://chenghu.oss-cn-shanghai.aliyuncs.com/blog/photos/' + data.link[i];
           var type = data.type[i];
           var target = src + (type === 'video' ? '.mp4' : '.jpg');
           src += '';
