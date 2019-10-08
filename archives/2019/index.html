@@ -6,21 +6,14 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>使用Verdaccio搭建npm私有服务 | Lynn的博客</title>
+  <title>Archives: 2019 | Lynn的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="一、 为什么需要搭建npm私有服务 如果公司处于隐私保护的需要，不想讲自己封的包推到npm社区，但又急需要一套完整的包管理工具来管理越来越多的组件，模块，项目。对于前端，最熟悉的莫过于npm，npm是前端包管理的不二选择  使用 NPM 装包的时候下载速度慢如龟速，所以解决办法是使用cnpm淘宝镜像来装包加速，但有比淘宝更快的方法是从局域网的私服下。 我们想在下载的时候，私有的包用公司内部的服务器">
-<meta name="keywords" content="float">
-<meta property="og:type" content="article">
-<meta property="og:title" content="使用Verdaccio搭建npm私有服务">
-<meta property="og:url" content="http://yoursite.com/2018/07/28/verdaccio/index.html">
+  <meta property="og:type" content="website">
+<meta property="og:title" content="Lynn的博客">
+<meta property="og:url" content="http://yoursite.com/archives/2019/index.html">
 <meta property="og:site_name" content="Lynn的博客">
-<meta property="og:description" content="一、 为什么需要搭建npm私有服务 如果公司处于隐私保护的需要，不想讲自己封的包推到npm社区，但又急需要一套完整的包管理工具来管理越来越多的组件，模块，项目。对于前端，最熟悉的莫过于npm，npm是前端包管理的不二选择  使用 NPM 装包的时候下载速度慢如龟速，所以解决办法是使用cnpm淘宝镜像来装包加速，但有比淘宝更快的方法是从局域网的私服下。 我们想在下载的时候，私有的包用公司内部的服务器">
-<meta property="og:image" content="https://chenghu.oss-cn-shanghai.aliyuncs.com/blog/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202019-10-07%20%E4%B8%8B%E5%8D%881.32.30.png">
-<meta property="og:updated_time" content="2019-10-08T09:11:42.133Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="使用Verdaccio搭建npm私有服务">
-<meta name="twitter:description" content="一、 为什么需要搭建npm私有服务 如果公司处于隐私保护的需要，不想讲自己封的包推到npm社区，但又急需要一套完整的包管理工具来管理越来越多的组件，模块，项目。对于前端，最熟悉的莫过于npm，npm是前端包管理的不二选择  使用 NPM 装包的时候下载速度慢如龟速，所以解决办法是使用cnpm淘宝镜像来装包加速，但有比淘宝更快的方法是从局域网的私服下。 我们想在下载的时候，私有的包用公司内部的服务器">
-<meta name="twitter:image" content="https://chenghu.oss-cn-shanghai.aliyuncs.com/blog/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202019-10-07%20%E4%B8%8B%E5%8D%881.32.30.png">
+<meta name="twitter:title" content="Lynn的博客">
   
     <link rel="alternative" href="/atom.xml" title="Lynn的博客" type="application/atom+xml">
   
@@ -168,226 +161,62 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-verdaccio" class="article article-type-post " itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
+            
   
-    <h1 class="article-title" itemprop="name">
-      使用Verdaccio搭建npm私有服务
+  
+    
+    
+      
+      
+      <section class="archives-wrap">
+        <div class="archive-year-wrap">
+          <a href="/archives/2019" class="archive-year">2019</a>
+        </div>
+        <div class="archives">
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      	<div class="article-meta">
+	      	<a href="/2019/10/08/verdaccio/" class="archive-article-date">
+  	<time datetime="2019-10-08T09:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-08</time>
+</a>
+        </div>
+    	 
+  
+    <h1 itemprop="name">
+      <a class="archive-article-title" href="/2019/10/08/verdaccio/">使用Verdaccio搭建npm私有服务</a>
     </h1>
   
 
-        
-        <a href="/2018/07/28/verdaccio/" class="archive-article-date">
-  	<time datetime="2018-07-28T10:12:01.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-28</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="一、-为什么需要搭建npm私有服务"><a href="#一、-为什么需要搭建npm私有服务" class="headerlink" title="一、 为什么需要搭建npm私有服务"></a>一、 为什么需要搭建npm私有服务</h3><ol>
-<li>如果公司处于隐私保护的需要，不想讲自己封的包推到npm社区，但又急需要一套完整的包管理工具来管理越来越多的组件，模块，项目。对于前端，最熟悉的莫过于npm，npm是前端包管理的不二选择 </li>
-<li>使用 NPM 装包的时候下载速度慢如龟速，所以解决办法是使用cnpm淘宝镜像来装包加速，但有比淘宝更快的方法是从局域网的私服下。</li>
-<li>我们想在下载的时候，私有的包用公司内部的服务器，公共的包走公共仓库<a id="more"></a>
-</li>
-</ol>
-<h3 id="二、-常用搭建私有-NPM-服务方式"><a href="#二、-常用搭建私有-NPM-服务方式" class="headerlink" title="二、 常用搭建私有 NPM 服务方式"></a>二、 常用搭建私有 NPM 服务方式</h3><ol>
-<li>Sinopia</li>
-<li><p>Verdaccio</p>
-<p>目前Sinopia已经在2015年10月后停止了丢 sinopia 的维护和升级，所以我推荐使用verdaccio来搭建npm私有服务</p>
-</li>
-</ol>
-<hr>
-<h3 id="搭建过程"><a href="#搭建过程" class="headerlink" title="搭建过程"></a>搭建过程</h3><h3 id="1-安装node环境"><a href="#1-安装node环境" class="headerlink" title="1. 安装node环境"></a>1. 安装node环境</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"> //下载node安装包到指定目录</div><div class="line"> wget https://npm.taobao.org/mirrors/node/v11<span class="number">.0</span><span class="number">.0</span>/node-v11<span class="number">.0</span><span class="number">.0</span>.tar.gz</div><div class="line"></div><div class="line">// 解压安装</div><div class="line">tar -xvf node-v11<span class="number">.0</span><span class="number">.0</span>.tar.gz</div></pre></td></tr></table></figure>
-<p>linux详细安装node教程<a href="https://www.jianshu.com/p/eb359a074071" target="_blank" rel="external">点击</a></p>
-<h3 id="2-安装verdaccio"><a href="#2-安装verdaccio" class="headerlink" title="2. 安装verdaccio"></a>2. 安装verdaccio</h3><p>使用npm或者cnpm安装，需要权限在npm 前面加sudo<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install -g verdaccio</div></pre></td></tr></table></figure></p>
-<h3 id="基本使用"><a href="#基本使用" class="headerlink" title="基本使用"></a>基本使用</h3><p> 一旦安装后，您只需要执行命令：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">  $&gt; verdaccio</div><div class="line">warn --- config file  - <span class="regexp">/home/</span>.config/verdaccio/config.yaml</div><div class="line">warn --- http address - http:<span class="comment">//localhost:4873/ - verdaccio/3.0.0</span></div></pre></td></tr></table></figure>
-<p>可以使用pm2来管理进程,安装好pm2之后:</p>
-<pre><code># 启动
-sudo pm2 start verdaccio
-
-# 关闭
-pm2 stop verdaccio
-</code></pre><p>   <img src="https://chenghu.oss-cn-shanghai.aliyuncs.com/blog/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202019-10-07%20%E4%B8%8B%E5%8D%881.32.30.png" alt="此处输入图片的描述"> </p>
-<h4 id="修改verdaccio配置"><a href="#修改verdaccio配置" class="headerlink" title="修改verdaccio配置"></a>修改verdaccio配置</h4><p>//执行如下命令修改配置，可以修改镜像源<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$&gt; vi /home/.config/verdaccio/config.yaml</div></pre></td></tr></table></figure></p>
-<p>由于 verdaccio 默认使用的是npm官方的源，你可以改成淘宝的源</p>
-<p>他的配置文件在 /home/.config/verdaccio/config.yaml</p>
-<p>其中有个 uplinks 字段</p>
-<pre><code>uplinks:
-  npmjs:
-  url: https://registry.npmjs.org/ 
-</code></pre><p>将 url 改为 <a href="https://registry.npm.taobao.org/" target="_blank" rel="external">https://registry.npm.taobao.org/</a> 即可</p>
-<h3 id="开发中如何使用"><a href="#开发中如何使用" class="headerlink" title="开发中如何使用"></a>开发中如何使用</h3><p> 本地开发中修改npm镜像源</p>
-<pre><code>npm set registry http://localhost:4873/
-</code></pre><p>你也可以在下载的时候带上参数 –registry</p>
-<pre><code>npm install --registry http://localhost:4873
-</code></pre><p>方便起见，可以在项目目录下新建 .npmrc 文件，写入如下内容：</p>
-<pre><code>registry=http://localhost:4873
-</code></pre><p>然后项目安装的包就会先从你自己的npm下载，如果找不到就会找官方npm源</p>
-<p>注意：<a href="http://localhost:4873指示本地运行的，部署在服务器的时候使用ip或者域名即可" target="_blank" rel="external">http://localhost:4873指示本地运行的，部署在服务器的时候使用ip或者域名即可</a></p>
-<p><a href="https://verdaccio.org/docs/zh-CN/installation" target="_blank" rel="external">verdaccio 文档</a></p>
-<h3 id="如何发布包"><a href="#如何发布包" class="headerlink" title="如何发布包"></a>如何发布包</h3><p>发布自己的包可以在网上找到很多资料，这里就不讲述了。<br>构建完自己的包之后，发布到私有服务中，一下命令</p>
-<pre><code># 注册用户
-npm adduser –registry http://localhost:4873
-#查看当前用户,是否是注册用户.
-npm who am i
-# 发布
-npm push 
-</code></pre>
-      
-
-      
-        <div class="page-reward">
-          <a href="javascript:;" class="page-reward-btn tooltip-top">
-            <div class="tooltip tooltip-east">
-            <span class="tooltip-item">
-              赏
-            </span>
-            <span class="tooltip-content">
-              <span class="tooltip-text">
-                <span class="tooltip-inner">
-                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
-                  <div class="reward-box">
-                    
-                    <div class="reward-box-item">
-                      <img class="reward-img" src="http://chenghu.oss-cn-shanghai.aliyuncs.com/alipay.png">
-                      <span class="reward-type">支付宝</span>
-                    </div>
-                    
-                    
-                    <div class="reward-box-item">
-                      <img class="reward-img" src="http://chenghu.oss-cn-shanghai.aliyuncs.com/wxplay.jpg">
-                      <span class="reward-type">微信</span>
-                    </div>
-                    
-                  </div>
-                </span>
-              </span>
-            </span>
-          </div>
-          </a>
-        </div>
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
+        <div class="article-info info-on-right">
+          
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">float</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Verdaccio</a>
         		</li>
       		
 		</ul>
 	</div>
 
-      
+          
 
-      
-
-      
-        
-<div class="share-btn share-icons tooltip-left">
-  <div class="tooltip tooltip-east">
-    <span class="tooltip-item">
-      <a href="javascript:;" class="share-sns share-outer">
-        <i class="icon icon-share"></i>
-      </a>
-    </span>
-    <span class="tooltip-content">
-      <div class="share-wrap">
-        <div class="share-icons">
-          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
-            <i class="icon icon-weibo"></i>
-          </a>
-          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
-            <i class="icon icon-weixin"></i>
-          </a>
-          <a class="qq share-sns" href="javascript:;" data-type="qq">
-            <i class="icon icon-qq"></i>
-          </a>
-          <a class="douban share-sns" href="javascript:;" data-type="douban">
-            <i class="icon icon-douban"></i>
-          </a>
-          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
-            <i class="icon icon-qzone"></i>
-          </a>
-          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
-            <i class="icon icon-facebook"></i>
-          </a>
-          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
-            <i class="icon icon-twitter"></i>
-          </a>
-          <a class="google share-sns" href="javascript:;" data-type="google">
-            <i class="icon icon-google"></i>
-          </a>
         </div>
-      </div>
-    </span>
-  </div>
-</div>
-
-<div class="page-modal wx-share js-wx-box">
-    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
-    <p>扫一扫，分享到微信</p>
-    <div class="wx-qrcode">
-      <img src="http://s.jiathis.com/qrcode.php?url=http://yoursite.com/2018/07/28/verdaccio/" alt="微信分享二维码">
-    </div>
-</div>
-
-<div class="mask js-mask"></div>
-      
-      <div class="clearfix"></div>
-    </div>
+        <div class="clearfix"></div>
+    </header>
   </div>
 </article>
-
-  
-<nav id="article-nav">
-  
-    <a href="/2018/07/28/float-list/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          使用Verdaccio搭建npm私有服务
-        
-      </div>
-    </a>
   
   
-    <a href="/2018/05/21/vue-map/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">vue高德地图</div>
-      <i class="icon-circle-right"></i>
-    </a>
-  
-</nav>
-
-
-
-
-
+    </div></section>
   
 
-  
+    
 
-  
-  <div id="SOHUCS" sid="verdaccio" ></div> 
-<script type="text/javascript"> 
-(function(){ 
-var appid = "cyt1o2czV"; 
-var conf = "087c94412da514618093c4664c58ffcb"; 
-var width = window.innerWidth || document.documentElement.clientWidth; 
-if (width < 960) { 
-window.document.write('<script id="changyan_mobile_js" charset="utf-8" type="text/javascript" src="http://changyan.sohu.com/upload/mobile/wap-js/changyan_mobile.js?client_id=' + appid + '&conf=' + conf + '"><\/script>'); } else { var loadJs=function(d,a){var c=document.getElementsByTagName("head")[0]||document.head||document.documentElement;var b=document.createElement("script");b.setAttribute("type","text/javascript");b.setAttribute("charset","UTF-8");b.setAttribute("src",d);if(typeof a==="function"){if(window.attachEvent){b.onreadystatechange=function(){var e=b.readyState;if(e==="loaded"||e==="complete"){b.onreadystatechange=null;a()}}}else{b.onload=a}}c.appendChild(b)};loadJs("http://changyan.sohu.com/upload/changyan.js",function(){window.changyan.api.config({appid:appid,conf:conf})}); } })(); </script>
-  
 
-  
 
 
           </div>
@@ -410,8 +239,8 @@ window.document.write('<script id="changyan_mobile_js" charset="utf-8" type="tex
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: true,
-		isArchive: false,
+		isPost: false,
+		isArchive: true,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
@@ -480,6 +309,10 @@ return o(t,i(n),arguments.length<3?void 0:u(arguments[2]))}})},function(t,n,r){v
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">float</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Verdaccio</a>
               </li>
              
               <li class="article-tag-list-item">
