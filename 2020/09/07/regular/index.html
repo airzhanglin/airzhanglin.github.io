@@ -6,15 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>regular | Lynn的博客</title>
+  <title>常用正则 | Lynn的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="article">
-<meta property="og:title" content="regular">
+  <meta name="description" content="开发中常常会碰到一些验证，自己随手记录下来，方便后面开发，省下时间来更多的去关注业务技术和功能点">
+<meta name="keywords" content="正则">
+<meta property="og:type" content="article">
+<meta property="og:title" content="常用正则">
 <meta property="og:url" content="http://yoursite.com/2020/09/07/regular/index.html">
 <meta property="og:site_name" content="Lynn的博客">
-<meta property="og:updated_time" content="2020-09-07T03:05:51.269Z">
+<meta property="og:description" content="开发中常常会碰到一些验证，自己随手记录下来，方便后面开发，省下时间来更多的去关注业务技术和功能点">
+<meta property="og:updated_time" content="2020-09-07T06:08:30.560Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="regular">
+<meta name="twitter:title" content="常用正则">
+<meta name="twitter:description" content="开发中常常会碰到一些验证，自己随手记录下来，方便后面开发，省下时间来更多的去关注业务技术和功能点">
   
     <link rel="alternative" href="/atom.xml" title="Lynn的博客" type="application/atom+xml">
   
@@ -169,7 +173,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      regular
+      常用正则
     </h1>
   
 
@@ -182,7 +186,12 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        
+        <p>开发中常常会碰到一些验证，自己随手记录下来，方便后面开发，省下时间来更多的去关注业务技术和功能点</p>
+<a id="more"></a>
+<h3 id="1-只能输入数字"><a href="#1-只能输入数字" class="headerlink" title="1. 只能输入数字"></a>1. 只能输入数字</h3>   <figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">el-input</span> <span class="attr">v-model.trim</span>=<span class="string">"mobile"</span>  <span class="attr">placeholder</span>=<span class="string">"请输入手机号码"</span>  @<span class="attr">input</span>=<span class="string">"handleInput('mobile')"</span>     /&gt;</span></div><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="undefined"></span></div><div class="line">    export default&#123;</div><div class="line">        data()&#123;</div><div class="line">            return&#123;</div><div class="line">                mobile:''  </div><div class="line">            &#125;</div><div class="line">        &#125;,</div><div class="line">        method:&#123;</div><div class="line">            handleInput(key) &#123; // 只能输入数字控制</div><div class="line">              this.formData[key] = this.formData[key].replace(/[^\.\d]/g, '')</div><div class="line">              this.formData[key] = this.formData[key].replace('.', '')</div><div class="line">            &#125;,</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div></pre></td></tr></table></figure>
+<h3 id="2-只能输入字母和数字-或汉字"><a href="#2-只能输入字母和数字-或汉字" class="headerlink" title="2. 只能输入字母和数字 或汉字"></a>2. 只能输入字母和数字 或汉字</h3> <figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">el-input</span> <span class="attr">v-model.trim</span>=<span class="string">"formData.empCode"</span>  <span class="attr">placeholder</span>=<span class="string">"请输入员工编码"</span>  @<span class="attr">input</span>=<span class="string">"handleInput('empCode')"</span> /&gt;</span></div><div class="line"></div><div class="line"> </div><div class="line"> <span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="undefined"></span></div><div class="line">     export default&#123;</div><div class="line">         data()&#123;</div><div class="line">             return&#123;</div><div class="line">                 empCode:''  </div><div class="line">             &#125;</div><div class="line">         &#125;,</div><div class="line">         method:&#123;</div><div class="line">             handleInput(key) &#123; </div><div class="line">                  // 限制只能输入字母 和数字</div><div class="line">               this[key] = this[key].replace(/[^\a-\z\A-\Z0-9]/ig, '')</div><div class="line">                 //  限制只能输入字母  汉字  数字</div><div class="line">                this[key] = this[key].replace(/[^\a-\z\A-\Z0-9\u4E00-\u9FA5]/g, '')</div><div class="line">             &#125;,</div><div class="line">             </div><div class="line">         &#125;</div><div class="line">     &#125;</div><div class="line"> <span class="tag">&lt;/<span class="name">script</span>&gt;</span></div></pre></td></tr></table></figure>
+<h3 id="3-密码"><a href="#3-密码" class="headerlink" title="3. 密码"></a>3. 密码</h3> <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="keyword">var</span> pattern = <span class="regexp">/^(?=.*[A-Za-z])(?=.*\d)(?=.*[$@$!%*#?&amp;])[A-Za-z\d$@$!%*#?&amp;]&#123;8,&#125;$/</span></div><div class="line"></div><div class="line"><span class="keyword">if</span>(pattern.test(<span class="string">'131231'</span>))&#123;</div><div class="line">   <span class="built_in">console</span>.log(请输入至少<span class="number">8</span>个字符，至少<span class="number">1</span>个字母，<span class="number">1</span>个数字和<span class="number">1</span>个特殊字符的密码) </div><div class="line">&#125;</div></pre></td></tr></table></figure>
+
       
 
       
@@ -221,6 +230,17 @@
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">正则</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
 
       
@@ -284,6 +304,15 @@
 
   
 <nav id="article-nav">
+  
+    <a href="/2020/09/07/faceLogin/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          faceLogin
+        
+      </div>
+    </a>
   
   
     <a href="/2019/10/08/verdaccio/" id="article-nav-older" class="article-nav-link-wrap">
@@ -408,11 +437,19 @@ return o(t,i(n),arguments.length<3?void 0:u(arguments[2]))}})},function(t,n,r){v
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Verdaccio</a>
+                <a href="javascript:void(0)" class="js-tag color3">正则</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">tracking 、face</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">jqdatatable</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Verdaccio</a>
               </li>
              
               <li class="article-tag-list-item">

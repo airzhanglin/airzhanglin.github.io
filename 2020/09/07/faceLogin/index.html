@@ -6,14 +6,21 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Tag: float | Lynn的博客</title>
+  <title>faceLogin | Lynn的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Lynn的博客">
-<meta property="og:url" content="http://yoursite.com/tags/float/index.html">
+  <meta name="description" content="之前项目中用过人脸识别，主要是js调用器摄像头，通过利用canvas画布将视频当前帧转换成图片的实例，其中用到了 mediaDevices.getUserMedia 方法。合成的图片发送给后台要后台去做活体检测。功能实现没问题，但是前端都是只能靠点击一个按钮来拍照，实现的太傻瓜。后来在掘金上看到一个大佬利用tracking来实现前端部分功能，改库只对人脸有效，而且能够框住人脸和跟踪，于是跟着文章自">
+<meta name="keywords" content="tracking 、face">
+<meta property="og:type" content="article">
+<meta property="og:title" content="faceLogin">
+<meta property="og:url" content="http://yoursite.com/2020/09/07/faceLogin/index.html">
 <meta property="og:site_name" content="Lynn的博客">
+<meta property="og:description" content="之前项目中用过人脸识别，主要是js调用器摄像头，通过利用canvas画布将视频当前帧转换成图片的实例，其中用到了 mediaDevices.getUserMedia 方法。合成的图片发送给后台要后台去做活体检测。功能实现没问题，但是前端都是只能靠点击一个按钮来拍照，实现的太傻瓜。后来在掘金上看到一个大佬利用tracking来实现前端部分功能，改库只对人脸有效，而且能够框住人脸和跟踪，于是跟着文章自">
+<meta property="og:image" content="https://chenghu.oss-cn-shanghai.aliyuncs.com/blog/face.gif">
+<meta property="og:updated_time" content="2020-09-17T07:56:18.463Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Lynn的博客">
+<meta name="twitter:title" content="faceLogin">
+<meta name="twitter:description" content="之前项目中用过人脸识别，主要是js调用器摄像头，通过利用canvas画布将视频当前帧转换成图片的实例，其中用到了 mediaDevices.getUserMedia 方法。合成的图片发送给后台要后台去做活体检测。功能实现没问题，但是前端都是只能靠点击一个按钮来拍照，实现的太傻瓜。后来在掘金上看到一个大佬利用tracking来实现前端部分功能，改库只对人脸有效，而且能够框住人脸和跟踪，于是跟着文章自">
+<meta name="twitter:image" content="https://chenghu.oss-cn-shanghai.aliyuncs.com/blog/face.gif">
   
     <link rel="alternative" href="/atom.xml" title="Lynn的博客" type="application/atom+xml">
   
@@ -161,60 +168,194 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-faceLogin" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2018" class="archive-year">2018</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/07/28/float-list/" class="archive-article-date">
-  	<time datetime="2018-07-28T10:12:01.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-28</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/07/28/float-list/">float列表两端对齐</a>
+    <h1 class="article-title" itemprop="name">
+      faceLogin
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+        
+        <a href="/2020/09/07/faceLogin/" class="archive-article-date">
+  	<time datetime="2020-09-07T06:19:05.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-09-07</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>之前项目中用过人脸识别，主要是js调用器摄像头，通过利用canvas画布将视频当前帧转换成图片的实例，其中用到了 mediaDevices.getUserMedia 方法。合成的图片发送给后台要后台去做活体检测。功能实现没问题，但是前端都是只能靠点击一个按钮来拍照，实现的太傻瓜。后来在掘金上看到一个大佬利用tracking来实现前端部分功能，改库只对人脸有效，而且能够框住人脸和跟踪，于是跟着文章自己实现了一遍。</p>
+<a id="more"></a>
+<p>##开发</p>
+<p><strong>1、找个架子</strong></p>
+<pre><code>我使用的[vue-cli3.0][1]来，快速搭建模板，而且官方的较为标准，有问题也可以在网上找到答案。
+</code></pre><p><strong>2、插件tracking.js</strong></p>
+<pre><code>Tracking.js 是一个独立的JavaScript库，用于跟踪从相机实时收到的数据。跟踪的数据既可以是颜色，也可以是人，也就是说我们可以通过检测到某特定颜色，或者检测一个人体/脸的出现与移动，来触发JavaScript 事件。它是非常易于使用的API，具有数个方法和事件（足够使用了）。
+</code></pre><p>   传送门 <a href="https://trackingjs.com/" target="_blank" rel="external">tracking.js</a></p>
+<p>  <strong>3、插件face-api.js</strong></p>
+<pre><code>是一个 JavaScript API，是基于 tensorflow.js 核心 API 的人脸检测和人脸识别的浏览器实现。它实现了一系列的卷积神经网络（CNN），针对网络和移动设备进行了优化
+</code></pre><p> <strong>4、引入js</strong></p>
+<p>下载两个文件后 在index.html引入<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"./tracking-min.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"./face-min.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div></pre></td></tr></table></figure></p>
+<p><strong>5、设计流程</strong></p>
+<ul>
+<li>调用摄像头</li>
+<li>检测摄像头中是否有人脸</li>
+<li>如果有人脸在画面中画出canvas层</li>
+<li>导出base64图片</li>
+<li>把图片发送给后端进行人脸叫人</li>
+<li>获得返回接口</li>
+</ul>
+<p><strong>6、HTML结构</strong></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">template</span>&gt;</span></div><div class="line">      <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"container"</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"face-box"</span>&gt;</span></div><div class="line">              <span class="tag">&lt;<span class="name">video</span> <span class="attr">id</span>=<span class="string">"_videoFace"</span> <span class="attr">width</span>=<span class="string">"375"</span> <span class="attr">height</span>=<span class="string">"200"</span> <span class="attr">preload</span> <span class="attr">autoPlay</span> <span class="attr">loop</span> <span class="attr">muted</span> /&gt;</span></div><div class="line">              <span class="tag">&lt;<span class="name">canvas</span> <span class="attr">id</span>=<span class="string">"_canvasFace"</span> <span class="attr">class</span>=<span class="string">"face-canvas"</span> <span class="attr">width</span>=<span class="string">"375"</span> <span class="attr">height</span>=<span class="string">"200"</span> /&gt;</span></div><div class="line">        <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">style</span>=<span class="string">'none'</span>&gt;</span></div><div class="line">            <span class="tag">&lt;<span class="name">p</span>&gt;</span>实时截图<span class="tag">&lt;/<span class="name">p</span>&gt;</span></div><div class="line">          <span class="tag">&lt;<span class="name">canvas</span> <span class="attr">id</span>=<span class="string">"_canvas2Face"</span> <span class="attr">width</span>=<span class="string">"375"</span> <span class="attr">height</span>=<span class="string">"200"</span> /&gt;</span></div><div class="line">        <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">      <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">template</span>&gt;</span></div></pre></td></tr></table></figure>
+<p><strong>7、js部分</strong> </p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">const</span> tracking = <span class="built_in">window</span>.tracking;<span class="comment">//  index.html引入的，window全局可以拿到</span></div><div class="line"><span class="keyword">let</span> video,canvas,canvas2,context,context2 </div><div class="line"><span class="keyword">export</span> <span class="keyword">default</span> &#123;</div><div class="line">  data() &#123;</div><div class="line">    <span class="keyword">return</span> &#123;</div><div class="line">      <span class="attr">canvas</span>: <span class="string">''</span>,</div><div class="line">      <span class="attr">canvas2</span>: <span class="string">''</span>,</div><div class="line">      <span class="attr">context</span>: <span class="string">''</span>,</div><div class="line">      <span class="attr">context2</span>: <span class="string">''</span>,</div><div class="line">      <span class="attr">timer</span>:<span class="literal">true</span></div><div class="line">    &#125;</div><div class="line">  &#125;,</div><div class="line">  mounted() &#123;</div><div class="line">    <span class="keyword">this</span>.initFace()</div><div class="line">  &#125;,</div><div class="line">  <span class="attr">methods</span>: &#123;</div><div class="line">    initFace() &#123;</div><div class="line">      video = <span class="built_in">document</span>.getElementById(<span class="string">'_videoFace'</span>);</div><div class="line">      canvas = <span class="built_in">document</span>.getElementById(<span class="string">'_canvasFace'</span>);</div><div class="line">      canvas2 = <span class="built_in">document</span>.getElementById(<span class="string">'_canvas2Face'</span>);</div><div class="line">      context = canvas.getContext(<span class="string">'2d'</span>);</div><div class="line">      context2 =  canvas2.getContext(<span class="string">'2d'</span>);</div><div class="line">      <span class="keyword">const</span> tracker = <span class="keyword">new</span> tracking.ObjectTracker(<span class="string">'face'</span>);</div><div class="line">      tracker.setInitialScale(<span class="number">4</span>);</div><div class="line">      tracker.setStepSize(<span class="number">1</span>);</div><div class="line">      tracker.setEdgesDensity(<span class="number">0.1</span>);</div><div class="line">      tracking.track(<span class="string">'#_videoFace'</span>, tracker, &#123; <span class="attr">camera</span>: <span class="literal">true</span> &#125;);</div><div class="line">      tracker.on(<span class="string">'track'</span>, (event) =&gt; &#123;</div><div class="line">        <span class="comment">// no-face</span></div><div class="line">        <span class="keyword">if</span> (event.data.length === <span class="number">0</span>) <span class="keyword">return</span>;</div><div class="line">        <span class="comment">// debounce</span></div><div class="line">        <span class="keyword">if</span> (<span class="keyword">this</span>.timer) &#123;</div><div class="line">          <span class="keyword">this</span>.draw(event)</div><div class="line">          <span class="keyword">this</span>.timer = <span class="literal">false</span>;</div><div class="line">          setTimeout(<span class="function"><span class="params">()</span> =&gt;</span> &#123;</div><div class="line">            <span class="keyword">this</span>.timer = <span class="literal">true</span>;</div><div class="line">          &#125;, <span class="number">0</span>)</div><div class="line">        &#125;</div><div class="line">      &#125;);</div><div class="line">    &#125;,</div><div class="line">    draw(event) &#123;</div><div class="line">      context.clearRect(<span class="number">0</span>, <span class="number">0</span>, canvas.width, canvas.height);</div><div class="line">      event.data.forEach(<span class="function">(<span class="params">rect</span>) =&gt;</span> &#123;</div><div class="line">        context.strokeStyle = <span class="string">'#10ff87'</span>;</div><div class="line">        context.strokeRect(rect.x, rect.y, rect.width, rect.height);</div><div class="line">        context.font = <span class="string">'11px Helvetica'</span>;</div><div class="line">        context.fillStyle = <span class="string">"#fff"</span>;</div><div class="line">        context.fillText(<span class="string">"x:"</span> + rect.x + <span class="string">'px'</span>, rect.x + rect.width + <span class="number">5</span>, rect.y + <span class="number">11</span>);</div><div class="line">        context.fillText(<span class="string">'y: '</span> + rect.y + <span class="string">'px'</span>, rect.x + rect.width + <span class="number">5</span>, rect.y + <span class="number">22</span>);</div><div class="line">      &#125;);</div><div class="line">      context2.drawImage(video, <span class="number">0</span>, <span class="number">0</span>, <span class="number">200</span>, <span class="number">150</span>);</div><div class="line">      <span class="keyword">const</span> snapData = canvas2.toDataURL(<span class="string">'image/png'</span>);</div><div class="line">      <span class="keyword">const</span> imgSrc = <span class="string">"data:image/png;"</span> + snapData;</div><div class="line">      <span class="keyword">this</span>.$emit(<span class="string">'change'</span>,imgSrc)</div><div class="line">    &#125;</div><div class="line">  &#125;,</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p><strong>8、效果</strong><br><img src="https://chenghu.oss-cn-shanghai.aliyuncs.com/blog/face.gif" alt="RUNOOB 图标" title="RUNOOB"></p>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="http://chenghu.oss-cn-shanghai.aliyuncs.com/alipay.png">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="http://chenghu.oss-cn-shanghai.aliyuncs.com/wxplay.jpg">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">float</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">tracking 、face</a>
         		</li>
       		
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://yoursite.com/2020/09/07/faceLogin/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
   
   
-    </div></section>
+    <a href="/2020/09/07/regular/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">常用正则</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+
+
+
   
 
-    
+  
+
+  
+  <div id="SOHUCS" sid="faceLogin" ></div> 
+<script type="text/javascript"> 
+(function(){ 
+var appid = "cyt1o2czV"; 
+var conf = "087c94412da514618093c4664c58ffcb"; 
+var width = window.innerWidth || document.documentElement.clientWidth; 
+if (width < 960) { 
+window.document.write('<script id="changyan_mobile_js" charset="utf-8" type="text/javascript" src="http://changyan.sohu.com/upload/mobile/wap-js/changyan_mobile.js?client_id=' + appid + '&conf=' + conf + '"><\/script>'); } else { var loadJs=function(d,a){var c=document.getElementsByTagName("head")[0]||document.head||document.documentElement;var b=document.createElement("script");b.setAttribute("type","text/javascript");b.setAttribute("charset","UTF-8");b.setAttribute("src",d);if(typeof a==="function"){if(window.attachEvent){b.onreadystatechange=function(){var e=b.readyState;if(e==="loaded"||e==="complete"){b.onreadystatechange=null;a()}}}else{b.onload=a}}c.appendChild(b)};loadJs("http://changyan.sohu.com/upload/changyan.js",function(){window.changyan.api.config({appid:appid,conf:conf})}); } })(); </script>
+  
+
+  
 
 
           </div>
@@ -237,9 +378,9 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
-		isTag: true,
+		isTag: false,
 		isCategory: false,
 		open_in_new: false,
 		root: "/",
